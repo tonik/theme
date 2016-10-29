@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+    require $composer;
+}
+
+$app = new Symfony\Component\Console\Application('Gin CLI', '0.1.0');
+
+$app->add(new Tonik\Gin\Foundation\Console\InitCommand);
+
+$app->run();

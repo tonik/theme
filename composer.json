@@ -1,0 +1,21 @@
+{
+    "name": "tonik/theme",
+    "description": "WordPress starter theme.",
+    "keywords": ["tonik", "gin", "wordpress", "theme"],
+    "license": "GPL-2.0+",
+    "type": "wordpress-theme",
+    "require": {
+        "php": ">=5.4",
+        "tonik/gin": "@dev"
+    },
+    "require-dev": {
+        "symfony/console": "~2.3|~3.0"
+    },
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "/Users/jedrzejchalubek/Code/tonik/gin"
+        }
+    ],
+    "minimum-stability": "dev"
+}
