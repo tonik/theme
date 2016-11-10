@@ -28,7 +28,9 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
 $config = require __DIR__ . '/../config/theme.php';
 
 if ($childConfig = locate_template('config/theme.php', false, false)) {
-    $theme->bind('config', array_merge($config, require $childConfig));
+    $config = new Tonik\Gin\Foundation\Config(array_merge($config, require $childConfig));
+
+    $theme->bind('config', $config);
 }
 
 $theme->bind('config', $config);

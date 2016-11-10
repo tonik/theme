@@ -25,10 +25,16 @@ function theme($key = null)
 /**
  * Gets theme config instance.
  *
+ * @param string|null $key
+ *
  * @return array
  */
-function config()
+function config($key = null)
 {
+    if (null !== $key) {
+        return theme('config')->get($key);
+    }
+
     return theme('config');
 }
 

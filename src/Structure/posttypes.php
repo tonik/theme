@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }};
+namespace {{ theme.namespace }}\Structure;
 
 // add_action('init', function () {
 //     register_post_type('book', [

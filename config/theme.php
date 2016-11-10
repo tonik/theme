@@ -3,6 +3,18 @@
 return [
     /*
     |--------------------------------------------------------------------------
+    | Theme Textdomain
+    |--------------------------------------------------------------------------
+    |
+    | Determines the textdomain for your theme. Should be used to dynamically set
+    | namespace for `gettext` strings across theme. Remember, this value must
+    | be in sync with `Text Domain:` declaration inside style.css theme file.
+    |
+    */
+   'textdomain' => 'craft710',
+
+    /*
+    |--------------------------------------------------------------------------
     | Theme Root Paths
     |--------------------------------------------------------------------------
     |
@@ -45,12 +57,14 @@ return [
     */
     'autoload' => [
         'helpers.php',
-        'posttypes.php',
-        'taxonomies.php',
+        'Structure/posttypes.php',
+        'Structure/taxonomies.php',
+        'Setup/actions.php',
         'Setup/filters.php',
         'Setup/supports.php',
         'Setup/navs.php',
         'Setup/widgets.php',
+        'Setup/shortcodes.php',
         'Http/assets.php',
         'Http/ajaxes.php',
     ],

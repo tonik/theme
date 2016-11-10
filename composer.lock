@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "/Users/jedrzejchalubek/Code/tonik/gin",
-                "reference": "8a3bdcda23c2171a8b6cfe6718983e3623f16672"
+                "reference": "660a3fed6d2a1fbcccd5f314e294e0b3763884a2"
             },
             "require": {
                 "php": ">=5.4"
@@ -33,7 +33,7 @@
                 "tonik",
                 "wordpress"
             ],
-            "time": "2016-11-07 11:47:54"
+            "time": "2016-11-10 15:13:56"
         }
     ],
     "packages-dev": [
