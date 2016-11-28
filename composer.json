@@ -5,17 +5,11 @@
     "license": "GPL-2.0+",
     "type": "wordpress-theme",
     "require": {
-        "php": ">=5.4",
-        "tonik/gin": "@dev"
+        "php": ">=5.6",
+        "tonik/gin": "^1.0.0"
     },
     "require-dev": {
         "symfony/console": "~2.3|~3.0"
     },
-    "repositories": [
-        {
-          "type": "vcs",
-          "url": "/Users/jedrzejchalubek/Code/tonik/gin"
-        }
-    ],
     "minimum-stability": "dev"
 }
