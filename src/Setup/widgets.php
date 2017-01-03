@@ -2,6 +2,12 @@
 
 namespace {{ theme.namespace }}\Setup;
 
-// add_action('widgets_init', function () {
-//     register_widget('My\Widget\Class');
-// });
+/**
+ * Register custom widgets, so they can be
+ * assigned to registered sidebars.
+ *
+ * @return void
+ */
+add_action('widgets_init', function () {
+    // register_widget('My\Widget\Class');
+});

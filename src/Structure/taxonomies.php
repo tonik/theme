@@ -2,8 +2,13 @@
 
 namespace {{ theme.namespace }}\Structure;
 
-// add_action('init', function () {
-//     register_taxonomy('genre', 'book', [
-//         'label' => __("Book's grenes", '{{ theme.textdomain }}'),
-//     ]);
-// });
+/**
+ * Register theme custom taxonomies.
+ *
+ * @return void
+ */
+add_action('init', function () {
+    // register_taxonomy('genre', 'book', [
+    //     'label' => __("Book's grenes", '{{ theme.textdomain }}'),
+    // ]);
+});

@@ -2,6 +2,11 @@
 
 namespace {{ theme.namespace }}\Setup;
 
-// add_filter('excerpt_length', function () {
-//     return 60;
-// });
+/**
+ * Theme custom action hook.
+ *
+ * @return void
+ */
+add_action('{{ theme.textdomain }}/custom/action', function () {
+    //
+});
