@@ -11,5 +11,10 @@
     "require-dev": {
         "symfony/console": "~2.3|~3.0"
     },
+    "autoload": {
+        "psr-4": {
+            "{{ theme.namespace }}\\Theme\\": "src/"
+        }
+    },
     "minimum-stability": "dev"
 }
