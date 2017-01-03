@@ -5,21 +5,21 @@ namespace {{ theme.namespace }}\Setup;
 use function {{ theme.namespace }}\template;
 
 /**
- * Adds shortcode.
+ * Adds custom shortcode.
  *
- * @param array $atts  the shortcode attributes
- * @param string $content  the shortcode content
+ * @param array $atts  The shortcode attributes.
+ * @param string $content  The shortcode content.
  *
- * @return string  the shortcode markup
+ * @return string  Shortcode markup.
  */
-add_shortcode('button', function ($atts, $content) {
+add_shortcode('custom-shortcode', function ($atts, $content) {
     ob_start();
 
     $attributes = shortcode_atts([
-        'href' => '#'
+        'class' => 'my-class'
     ], $atts);
 
-    template('shortcodes/button', compact('attributes', 'content'));
+    template('shortcodes/custom-shortcode', compact('attributes', 'content'));
 
     return ob_get_clean();
 });
