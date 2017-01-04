@@ -1,12 +1,14 @@
 #!/usr/bin/env php
 <?php
 
+use Symfony\Component\Console\Exception\RuntimeException;
+
 if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     require $composer;
+
+    new Tonik\Gin\Foundation\Console\CLI();
+
+    return;
 }
 
-$app = new Symfony\Component\Console\Application('Tonik&Gin CLI');
-
-$app->add(new Tonik\Gin\Foundation\Console\InitCommand);
-
-$app->run();
+throw new RuntimeException("Please, install composer dependences before running CLI.");
