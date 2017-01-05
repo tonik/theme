@@ -2,16 +2,16 @@
 
 /*
 |--------------------------------------------------------------------------
-| Searches for `Tonik & Gin` plugin
+| Searches for `tonik/gin` package
 |--------------------------------------------------------------------------
 |
-| This section checks if `Tonik & Gin` plugin is present. It is
-| required to correct functioning. When plugin is missing
+| This section checks if `tonik/gin` package is present. It is
+| required to correct functioning. When package is missing
 | display error messages on the front and admin.
 |
  */
 
-// Include detect plugin.
+// Include detect plugin function.
 if ( ! function_exists('is_plugin_active')) {
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
@@ -36,11 +36,11 @@ if ( ! (
     // Die and display alert information, if we are
     // not on the admin, login or register page.
     if ( ! tonikgin_is_admin_login_or_register_page()) {
-        wp_die(__("Unfortunately, this theme requires <strong>Tonik&Gin</strong> plugin. Please, make sure it's installed and activated.", '{{ theme.textdomain }}'));
+        wp_die(__("Important! This theme requires <a href='//github.com/tonik/gin'><strong>tonik/gin package</strong></a>. Please, make sure it's installed and active.", '{{ theme.textdomain }}'));
     }
 
     /**
-     * Outputs error message markup about missing plugin.
+     * Outputs error message markup about missing package.
      *
      * @return void
      */
@@ -49,7 +49,7 @@ if ( ! (
     ?>
         <div class="error notice">
             <p>
-                <?php _e('We could not find <strong>Tonik&Gin plugin</strong>. Install and activate', '{{ theme.textdomain }}'); ?>
+                <?php _e("We could not find <strong><a href='//github.com/tonik/gin'>tonik/gin package</a></strong>. You have to install it before using this theme.", '{{ theme.textdomain }}'); ?>
             </p>
         </div>
     <?php
