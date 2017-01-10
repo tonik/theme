@@ -2,12 +2,16 @@
 
 namespace {{ theme.namespace }}\Setup;
 
-/**
- * Register custom widgets, so they can be
- * assigned to registered sidebars.
- *
- * @return void
- */
+/*
+|-----------------------------------------------------------
+| Theme Custom Widgets
+|-----------------------------------------------------------
+|
+| This file is for registering your theme widgets, so
+| they can be assigned to sidebars by administrator.
+|
+*/
+
 add_action('widgets_init', function () {
     // register_widget('My\Widget\Class');
 });

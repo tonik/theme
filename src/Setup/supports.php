@@ -2,6 +2,16 @@
 
 namespace {{ theme.namespace }}\Setup;
 
+/*
+|-----------------------------------------------------------
+| Theme Supports
+|-----------------------------------------------------------
+|
+| This file enables theme supports, which activates various
+| WordPress functions used or required by this theme.
+|
+*/
+
 add_action('after_setup_theme', function () {
     /**
      * Add support for custom logo. Allow for setting
