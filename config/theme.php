@@ -66,6 +66,7 @@ return [
         'Setup/widgets.php',
         'Setup/shortcodes.php',
         'Setup/thumbnails.php',
+        'Setup/services.php',
         'Http/assets.php',
         'Http/ajaxes.php',
     ],
