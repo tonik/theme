@@ -15,5 +15,5 @@ namespace {{ theme.namespace }}\Setup;
 
 // Shortens posts excerpts to 30 character length.
 add_filter('excerpt_length', function () {
-    return 30;
+    // return 30;
 });
