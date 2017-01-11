@@ -7,4 +7,3 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <?php {{ theme.namespace }}\template('partials/alert-upgrade-browser'); ?>
