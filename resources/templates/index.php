@@ -1,9 +1,21 @@
 <?php get_header() ?>
+    <style>
+        html, body {
+            height: 100%;
+        }
 
-    <?= $value ?>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 
-    <?php while (have_posts()): the_post(); ?>
-	        <p><?php the_title() ?></p>
-	    <?php endwhile; ?>
+    <article>
+        <h1><?= $title ?></h1>
 
+        <p><?= $content ?></p>
+
+        <p><?= do_shortcode("[button href='{$button['link']}']{$button['title']}[/button]") ?></p>
+    </article>
 <?php get_footer() ?>
