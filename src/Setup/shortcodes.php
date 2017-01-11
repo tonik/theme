@@ -15,14 +15,14 @@ use function {{ theme.namespace }}\template;
 |
 */
 
-add_shortcode('custom-shortcode', function ($atts, $content) {
+add_shortcode('button', function ($atts, $content) {
     $attributes = shortcode_atts([
-        'class' => 'my-class'
+        'href' => '#'
     ], $atts);
 
     ob_start();
 
-    template('shortcodes/custom-shortcode', compact('attributes', 'content'));
+    template('shortcodes/button', compact('attributes', 'content'));
 
     return ob_get_clean();
 });
