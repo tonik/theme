@@ -17,7 +17,7 @@ use function {{ theme.namespace }}\asset_path;
 
 // Manages theme stylesheets.
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('theme', asset_path('css/theme.css'));
+    // wp_enqueue_style('theme', asset_path('css/theme.css'));
 });
 
 // Manages theme scripts.
