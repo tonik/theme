@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "{{ theme.namespace }}\\Theme\\": "src/"
+            "{{ theme.namespace }}\\": "src/"
         }
     },
     "minimum-stability": "dev"
