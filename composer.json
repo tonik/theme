@@ -16,6 +16,5 @@
         "psr-4": {
             "{{ theme.namespace }}\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
