@@ -24,3 +24,12 @@ add_action('wp_enqueue_scripts', function () {
 add_action('wp_enqueue_scripts', function () {
     // wp_enqueue_script('theme-scripts', asset_path('js/all.js'));
 });
+
+// Moves jQuery to the footer on front-end.
+add_action('wp_default_scripts', function ($wp_scripts) {
+    if ( ! is_admin()) {
+        $wp_scripts->add_data('jquery', 'group', 1);
+        $wp_scripts->add_data('jquery-core', 'group', 1);
+        $wp_scripts->add_data('jquery-migrate', 'group', 1);
+    }
+});
