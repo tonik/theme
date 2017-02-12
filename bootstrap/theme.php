@@ -27,12 +27,6 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
 
 $config = require __DIR__ . '/../config/theme.php';
 
-if (is_child_theme()) {
-	if ($locatedConfig = locate_template('config/theme.php', false, false)) {
-		$config = array_merge_recursive($config, require $locatedConfig);
-	}
-}
-
 $theme->bind('config', new Tonik\Gin\Foundation\Config($config));
 
 

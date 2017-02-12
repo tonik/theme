@@ -11,7 +11,7 @@ return [
     | be in sync with `Text Domain:` declaration inside style.css theme file.
     |
     */
-   'textdomain' => 'craft710',
+   'textdomain' => '{{ theme.textdomain }}',
 
     /*
     |--------------------------------------------------------------------------
