@@ -19,9 +19,9 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
 | Bind Theme Config
 |-----------------------------------------------------------
 |
-| We neet to bind all configs like theme's paths, directories
-| and files to autoload. We look for child theme config
-| file before binding values inside theme registry.
+| We neet to bind configs like theme's paths, directories and
+| files to autoload. This values will be used by the rest
+| of theme components like assets, templates etc.
 |
 */
 
