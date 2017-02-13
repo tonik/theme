@@ -2,6 +2,8 @@
 
 namespace {{ theme.namespace }}\Structure;
 
+use function {{ theme.namespace }}\config;
+
 /*
 |-----------------------------------------------------------
 | Theme Custom Taxonomies
@@ -14,6 +16,6 @@ namespace {{ theme.namespace }}\Structure;
 
 add_action('init', function () {
     // register_taxonomy('genre', 'book', [
-    //     'label' => __("Book's grenes", '{{ theme.textdomain }}'),
+    //     'label' => __("Book's grenes", config('textdomain')),
     // ]);
 });

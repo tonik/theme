@@ -2,6 +2,8 @@
 
 namespace {{ theme.namespace }}\Setup;
 
+use function {{ theme.namespace }}\config;
+
 /*
 |-----------------------------------------------------------
 | Theme Sidebars
@@ -15,7 +17,7 @@ namespace {{ theme.namespace }}\Setup;
 
 add_action('widgets_init', function () {
     register_sidebar([
-        'name' => __('Sidebar', '{{ theme.textdomain }}'),
-        'description' => __('Website sidebar.', '{{ theme.textdomain }}'),
+        'name' => __('Sidebar', config('textdomain')),
+        'description' => __('Website sidebar.', config('textdomain')),
     ]);
 });

@@ -2,6 +2,8 @@
 
 namespace {{ theme.namespace }}\Setup;
 
+use function {{ theme.namespace }}\config;
+
 /*
 |----------------------------------------------------------------
 | Theme Navigations
@@ -14,6 +16,6 @@ namespace {{ theme.namespace }}\Setup;
 
 add_action('after_setup_theme', function () {
     // register_nav_menus([
-    //     'primary' => __('Primary', '{{ theme.textdomain }}'),
+    //     'primary' => __('Primary', config('textdomain')),
     // ]);
 });
