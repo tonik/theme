@@ -45,7 +45,7 @@ $ npm install
 
 ## Compiling Assets
 
-Theme uses [Laravel Elixir](https://laravel.com/docs/5.3/elixir) to compile it's scripts and stylesheets. Files are generated to the `public` directory.
+Theme uses [Laravel Elixir](https://laravel.com/docs/5.3/elixir) to compile it's scripts and stylesheets.
 
 ```bash
 # Run compile tasks.
@@ -60,16 +60,16 @@ $ gulp --production
 
 ## Folders and Files Structure
 
-This starter theme introduces "easy to follow" folder structure, which enforce to divide your theme logic into components.
+This starter theme introduces "easy to follow" folder structure, which enforce to divide your theme logic into separate files.
 
 ```
-theme
-    ├── bootstrap/
+themes                              # → Root of your theme
+    ├── bootstrap/                  # → Files responsible for bootstrapping a theme
+    │   ├── compatibility.php       # → (don't edit manually)
+    │   ├── theme.php               # → (don't edit manually)
     ├── config/
     │   ├── theme.php
     ├── public/
-    │   ├── js
-    │   ├── css
     │   ├── images
     │   ├── fonts
     ├── resources/
@@ -88,6 +88,7 @@ theme
     │   │   ├── shortcodes.php
     │   │   ├── sidebars.php
     │   │   ├── supports.php
+    │   │   ├── thumbnails.php
     │   │   ├── widgets.php
     │   ├── Structure/
     │   │   ├── posttypes.php
@@ -96,13 +97,13 @@ theme
     ├── 404.php
     ├── composer.json
     ├── footer.php
-    ├── functions.php
-    ├── gin
+    ├── functions.php               # → Bootstrapping a theme. Initiates theme Autoloader and Composer (don't edit manually)
+    ├── gin                         # → (don't edit manually)
     ├── header.php
     ├── index.php
     ├── package.json
     ├── screenshot.png
-    ├── style.css
+    ├── style.css                   # → (don't write any CSS declarations in here)
 ```
 
 ## USAGE.md Boilerplate
