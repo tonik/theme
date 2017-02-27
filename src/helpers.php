@@ -10,13 +10,14 @@ use Tonik\Gin\Template\Template;
  * Gets theme instance.
  *
  * @param string|null $key
+ * @param array $parameters
  *
  * @return \Tonik\Gin\Foundation\Theme
  */
-function theme($key = null)
+function theme($key = null, $parameters = [])
 {
     if (null !== $key) {
-        return Theme::getInstance()->get($key);
+        return Theme::getInstance()->get($key, $parameters);
     }
 
     return Theme::getInstance();
