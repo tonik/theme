@@ -2,8 +2,6 @@
 
 namespace {{ theme.namespace }}\Structure;
 
-use function {{ theme.namespace }}\config;
-
 /*
 |-----------------------------------------------------------
 | Theme Custom Taxonomies
@@ -14,8 +12,36 @@ use function {{ theme.namespace }}\config;
 |
 */
 
-add_action('init', function () {
-    // register_taxonomy('genre', 'book', [
-    //     'label' => __("Book's grenes", config('textdomain')),
+use function {{ theme.namespace }}\config;
+
+/**
+ * Registers `book_genre` custom taxonomy.
+ *
+ * @return void
+ */
+function register_book_genre_taxonomy()
+{
+    // register_taxonomy('book_genre', 'book', [
+    //     'rewrite' => [
+    //         'slug' => 'books/genre',
+    //         'with_front' => true,
+    //         'hierarchical' => true,
+    //     ],
+    //     'hierarchical' => true,
+    //     'public' => true,
+    //     'labels' => [
+    //         'name' => _x('Genres', 'taxonomy general name', config('textdomain')),
+    //         'singular_name' => _x('Genre', 'taxonomy singular name', config('textdomain')),
+    //         'search_items' => __('Search Genres', config('textdomain')),
+    //         'all_items' => __('All Genres', config('textdomain')),
+    //         'parent_item' => __('Parent Genre', config('textdomain')),
+    //         'parent_item_colon' => __('Parent Genre:', config('textdomain')),
+    //         'edit_item' => __('Edit Genre', config('textdomain')),
+    //         'update_item' => __('Update Genre', config('textdomain')),
+    //         'add_new_item' => __('Add New Genre', config('textdomain')),
+    //         'new_item_name' => __('New Genre Name', config('textdomain')),
+    //         'menu_name' => __('Genre', config('textdomain')),
+    //     ],
     // ]);
-});
+}
+add_action('init', '{{ theme.namespace }}\Structure\register_book_genre_taxonomy');

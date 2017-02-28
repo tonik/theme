@@ -2,8 +2,6 @@
 
 namespace {{ theme.namespace }}\Setup;
 
-use function {{ theme.namespace }}\template;
-
 /*
 |--------------------------------------------------------------------------
 | Custom Shortcodes
@@ -15,7 +13,17 @@ use function {{ theme.namespace }}\template;
 |
 */
 
-add_shortcode('button', function ($atts, $content) {
+use function {{ theme.namespace }}\template;
+
+/**
+ * Renders a [button] shortcode.
+
+ * @param  array $atts
+ * @param  string $content
+ * @return string
+ */
+function render_button_shortcode($atts, $content)
+{
     $attributes = shortcode_atts([
         'href' => '#'
     ], $atts);
@@ -25,4 +33,5 @@ add_shortcode('button', function ($atts, $content) {
     template('shortcodes/button', compact('attributes', 'content'));
 
     return ob_get_clean();
-});
+}
+add_shortcode('button', '{{ theme.namespace }}\Setup\render_button_shortcode');

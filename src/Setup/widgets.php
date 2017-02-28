@@ -8,10 +8,18 @@ namespace {{ theme.namespace }}\Setup;
 |-----------------------------------------------------------
 |
 | This file is for registering your theme widgets, so
-| they can be assigned to sidebars by administrator.
+| they can be assigned to sidebar areas in admin
+| panel by website administrator or user.
 |
 */
 
-add_action('widgets_init', function () {
+/**
+ * Registers custom widgets.
+ *
+ * @return void
+ */
+function register_widgets()
+{
     // register_widget('\My\Widget\Class');
-});
+}
+add_action('widgets_init', '{{ theme.namespace }}\Setup\register_widgets');

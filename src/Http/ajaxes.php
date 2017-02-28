@@ -13,14 +13,19 @@ namespace {{ theme.namespace }}\Http;
 |
 */
 
+/**
+ * My AJAX action callback.
+
+ * @return void
+ */
 function action_callback()
 {
+    // Validate nonce token.
     check_ajax_referer('my_action_nonce', 'nonce');
 
     // Action logic...
 
     die();
 }
-
-add_action('wp_ajax_my_action', 'action_callback');
-add_action('wp_ajax_nopriv_my_action', 'action_callback');
+add_action('wp_ajax_my_action', '{{ theme.namespace }}\Http\action_callback');
+add_action('wp_ajax_nopriv_my_action', '{{ theme.namespace }}\Http\action_callback');

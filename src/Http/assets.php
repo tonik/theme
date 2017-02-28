@@ -2,8 +2,6 @@
 
 namespace {{ theme.namespace }}\Http;
 
-use function {{ theme.namespace }}\asset_path;
-
 /*
 |-----------------------------------------------------------------
 | Theme Assets
@@ -15,21 +13,50 @@ use function {{ theme.namespace }}\asset_path;
 |
 */
 
-// Manages theme stylesheets.
-add_action('wp_enqueue_scripts', function () {
-    // wp_enqueue_style('theme', asset_path('css/theme.css'));
-});
+use function {{ theme.namespace }}\asset_path;
 
-// Manages theme scripts.
-add_action('wp_enqueue_scripts', function () {
-    // wp_enqueue_script('theme-scripts', asset_path('js/all.js'));
-});
+/**
+ * Registers theme stylesheet files.
+ *
+ * @return void
+ */
+function register_stylesheets() {
+    wp_enqueue_style('theme-stylesheet', asset_path('css/theme.css'));
+}
+add_action('wp_enqueue_scripts', '{{ theme.namespace }}\Http\register_stylesheets');
 
-// Moves jQuery to the footer on front-end.
-add_action('wp_default_scripts', function ($wp_scripts) {
-    if ( ! is_admin()) {
+/**
+ * Registers theme script files.
+ *
+ * @return void
+ */
+function register_scripts() {
+    wp_enqueue_script('bootstrap', asset_path('js/bootstrap.js'), ['jquery'], null, true);
+    wp_enqueue_script('theme-scripts', asset_path('js/theme.js'), ['bootstrap'], null, true);
+}
+add_action('wp_enqueue_scripts', '{{ theme.namespace }}\Http\register_scripts');
+
+/**
+ * Registers editor stylesheets.
+ *
+ * @return void
+ */
+function register_editor_stylesheets() {
+    add_editor_style(asset_path('css/theme.css'));
+}
+add_action('admin_init', '{{ theme.namespace }}\Http\register_editor_stylesheets');
+
+/**
+ * Moves front-end jQuery script to the footer.
+
+ * @param  \WP_Scripts $wp_scripts
+ * @return void
+ */
+function move_jquery_to_the_footer($wp_scripts) {
+    if (! is_admin()) {
         $wp_scripts->add_data('jquery', 'group', 1);
         $wp_scripts->add_data('jquery-core', 'group', 1);
         $wp_scripts->add_data('jquery-migrate', 'group', 1);
     }
-});
+}
+add_action('wp_default_scripts', '{{ theme.namespace }}\Http\move_jquery_to_the_footer');

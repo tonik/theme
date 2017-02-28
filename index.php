@@ -1,19 +1,28 @@
 <?php
 
+namespace {{ theme.namespace }};
+
 /*
 |------------------------------------------------------------------
-| Index
+| Homepage
 |------------------------------------------------------------------
 |
-| Think about your Theme Template Files as some sort of Controllers
-| from MVC design pattern. They should link database queries and
-| application logic with your theme views and template files.
+| Think about theme template files as some sort of controllers
+| from MVC design pattern. They should link application
+| logic with your theme templates files.
 |
 */
 
+use function {{ theme.namespace }}\template;
+
+/**
+ * Renders homepage page.
+ *
+ * @uses resources/templates/homepage.php
+ */
 $post = get_post(1);
 
-{{ theme.namespace }}\template('index', [
+template('homepage', [
     'title' => $post->post_title,
     'content' => $post->post_content,
     'button' => [

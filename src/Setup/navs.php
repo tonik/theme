@@ -2,8 +2,6 @@
 
 namespace {{ theme.namespace }}\Setup;
 
-use function {{ theme.namespace }}\config;
-
 /*
 |----------------------------------------------------------------
 | Theme Navigations
@@ -14,8 +12,17 @@ use function {{ theme.namespace }}\config;
 |
 */
 
-add_action('after_setup_theme', function () {
-    // register_nav_menus([
-    //     'primary' => __('Primary', config('textdomain')),
-    // ]);
-});
+use function {{ theme.namespace }}\config;
+
+/**
+ * Registers navigation areas.
+ *
+ * @return void
+ */
+function register_navigation_areas()
+{
+    register_nav_menus([
+        'primary' => __('Primary', config('textdomain')),
+    ]);
+}
+add_action('after_setup_theme', '{{ theme.namespace }}\Setup\register_navigation_areas');

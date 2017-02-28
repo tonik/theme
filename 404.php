@@ -1,5 +1,7 @@
 <?php
 
+namespace {{ theme.namespace }};
+
 /*
 |------------------------------------------------------------------
 | 404
@@ -11,7 +13,14 @@
 |
 */
 
-{{ theme.namespace }}\template('index', [
+use function {{ theme.namespace }}\template;
+
+/**
+ * Renders 404 page.
+ *
+ * @uses resources/templates/homepage.php
+ */
+template('homepage', [
     'title' => 'Not Found',
     'content' => 'The page you are looking for no longer exists.',
     'button' => [

@@ -13,7 +13,13 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-// An example of theme custom action hook.
-add_action('{{ theme.textdomain }}/custom/action', function () {
+/**
+ * Example action callback.
+ *
+ * @return void
+ */
+function example_action()
+{
     //
-});
+}
+add_action('wp_footer', '{{ theme.namespace }}\Setup\example_action');

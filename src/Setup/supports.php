@@ -9,10 +9,17 @@ namespace {{ theme.namespace }}\Setup;
 |
 | This file enables theme supports, which activates various
 | WordPress functions used or required by this theme.
+| By default we enabled most common for you.
 |
 */
 
-add_action('after_setup_theme', function () {
+/**
+ * Adds various theme supports.
+ *
+ * @return void
+ */
+function add_theme_supports()
+{
     /**
      * Add support for custom logo. Allow for setting
      * logo for theme via WordPress customizer.
@@ -52,4 +59,5 @@ add_action('after_setup_theme', function () {
         'gallery',
         'caption',
     ]);
-});
+}
+add_action('after_setup_theme', '{{ theme.namespace }}\Setup\add_theme_supports');
