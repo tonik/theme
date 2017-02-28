@@ -13,6 +13,8 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
+use function {{ theme.namespace }}\config;
+
 /**
  * Adds various theme supports.
  *
@@ -61,3 +63,16 @@ function add_theme_supports()
     ]);
 }
 add_action('after_setup_theme', '{{ theme.namespace }}\Setup\add_theme_supports');
+
+/**
+ * Loads theme textdomain language files.
+ *
+ * @return void
+ */
+function load_textdomain() {
+    $paths = config('paths');
+    $directories = config('directories');
+
+    load_theme_textdomain(config('textdomain'), "{$paths['directory']}/{$directories['languages']}");
+}
+add_action('after_setup_theme', '{{ theme.namespace }}\Setup\load_textdomain');

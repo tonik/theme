@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Polski\n"
+"POT-Creation-Date: 2017-02-28 15:40+0100\n"
+"PO-Revision-Date: 2017-02-28 15:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: Tonik\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: bootstrap/compatibility.php:39
+msgid ""
+"Important! This theme requires <a href='//github.com/tonik/"
+"gin'><strong>tonik/gin package</strong></a>. Please, make sure it's "
+"installed and active."
+msgstr ""
+"Uwaga! Ten motyw wymaga paczki <a href='//github.com/tonik/"
+"gin'><strong>tonik/gin</strong></a> do poprawnego działania. Upewnij, że "
+"jest ona zainstalowana i aktywna."
+
+#: bootstrap/compatibility.php:52
+msgid ""
+"We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin "
+"package</strong></a>. You have to install it before using this theme."
+msgstr ""
+"Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/gin'><strong>tonik/"
+"gin</strong></a>. Musisz ją zainstalować, aby używać tego motywu."
+
+#: src/Setup/navs.php:25
+msgid "Primary"
+msgstr "Podstawowe"
+
+#: src/Setup/sidebars.php:26
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: src/Setup/sidebars.php:27
+msgid "Website sidebar"
+msgstr "Pasek boczny strony"
+
+#~ msgid ""
+#~ "We could not find <strong><a href='//github.com/tonik/gin'>tonik/gin "
+#~ "package</a></strong>. You have to install it before using this theme."
+#~ msgstr ""
+#~ "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a>. Musisz ją zainstalować, aby używać "
+#~ "tego motywu."
+
+#~ msgid "Website sidebar."
+#~ msgstr "Pasek boczny strony."

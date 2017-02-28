@@ -49,7 +49,7 @@ if ( ! (
     ?>
         <div class="error notice">
             <p>
-                <?php _e("We could not find <strong><a href='//github.com/tonik/gin'>tonik/gin package</a></strong>. You have to install it before using this theme.", '{{ theme.textdomain }}'); ?>
+                <?php _e("We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin package</strong></a>. You have to install it before using this theme.", '{{ theme.textdomain }}'); ?>
             </p>
         </div>
     <?php

@@ -39,6 +39,7 @@ return [
     |
     */
     'directories' => [
+        'languages' => 'resources/languages',
         'templates' => 'resources/templates',
         'assets' => 'resources/assets',
         'public' => 'public',
@@ -63,6 +64,7 @@ return [
         'Setup/filters.php',
         'Setup/supports.php',
         'Setup/navs.php',
+        'Setup/sidebars.php',
         'Setup/widgets.php',
         'Setup/shortcodes.php',
         'Setup/thumbnails.php',
