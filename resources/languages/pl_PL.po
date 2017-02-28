@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Polski\n"
-"POT-Creation-Date: 2017-02-28 15:40+0100\n"
-"PO-Revision-Date: 2017-02-28 15:40+0100\n"
+"POT-Creation-Date: 2017-02-28 16:56+0100\n"
+"PO-Revision-Date: 2017-02-28 16:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: Tonik\n"
 "Language: pl_PL\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: bootstrap/compatibility.php:39
 msgid ""
 "Important! This theme requires <a href='//github.com/tonik/"
-"gin'><strong>tonik/gin package</strong></a>. Please, make sure it's "
+"gin'><strong>tonik/gin</strong></a> package. Please, make sure it's "
 "installed and active."
 msgstr ""
 "Uwaga! Ten motyw wymaga paczki <a href='//github.com/tonik/"
@@ -31,8 +31,8 @@ msgstr ""
 
 #: bootstrap/compatibility.php:52
 msgid ""
-"We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin "
-"package</strong></a>. You have to install it before using this theme."
+"We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin</"
+"strong></a> package. You have to install it before using this theme."
 msgstr ""
 "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/gin'><strong>tonik/"
 "gin</strong></a>. Musisz ją zainstalować, aby używać tego motywu."
@@ -41,13 +41,30 @@ msgstr ""
 msgid "Primary"
 msgstr "Podstawowe"
 
-#: src/Setup/sidebars.php:26
+#: src/Setup/sidebars.php:27
 msgid "Sidebar"
 msgstr "Pasek boczny"
 
-#: src/Setup/sidebars.php:27
+#: src/Setup/sidebars.php:28
 msgid "Website sidebar"
 msgstr "Pasek boczny strony"
+
+#~ msgid ""
+#~ "Important! This theme requires <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin package</strong></a>. Please, make sure it's "
+#~ "installed and active."
+#~ msgstr ""
+#~ "Uwaga! Ten motyw wymaga paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a> do poprawnego działania. Upewnij, że "
+#~ "jest ona zainstalowana i aktywna."
+
+#~ msgid ""
+#~ "We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin "
+#~ "package</strong></a>. You have to install it before using this theme."
+#~ msgstr ""
+#~ "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a>. Musisz ją zainstalować, aby używać "
+#~ "tego motywu."
 
 #~ msgid ""
 #~ "We could not find <strong><a href='//github.com/tonik/gin'>tonik/gin "
