@@ -12,11 +12,11 @@
  */
 
 // Include detect plugin function.
-if ( ! function_exists('is_plugin_active')) {
+if (! function_exists('is_plugin_active')) {
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
 
-if ( ! (
+if (! (
     is_plugin_active('tonik-gin/tonik-gin.php')
     || class_exists('Tonik\Gin\Foundation\Theme')
 ))
@@ -35,8 +35,8 @@ if ( ! (
 
     // Die and display alert information, if we are
     // not on the admin, login or register page.
-    if ( ! tonikgin_is_admin_login_or_register_page()) {
-        wp_die(__("Important! This theme requires <a href='//github.com/tonik/gin'><strong>tonik/gin package</strong></a>. Please, make sure it's installed and active.", '{{ theme.textdomain }}'));
+    if (! tonikgin_is_admin_login_or_register_page()) {
+        wp_die(__("Important! This theme requires <a href='//github.com/tonik/gin'><strong>tonik/gin</strong></a> package. Please, make sure it's installed and active."));
     }
 
     /**
@@ -49,7 +49,7 @@ if ( ! (
     ?>
         <div class="error notice">
             <p>
-                <?php _e("We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin package</strong></a>. You have to install it before using this theme.", '{{ theme.textdomain }}'); ?>
+                <?php _e("We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin</strong></a> package. You have to install it before using this theme."); ?>
             </p>
         </div>
     <?php
@@ -58,5 +58,9 @@ if ( ! (
     // Hook to the admin notices and display error message.
     add_action('admin_notices', 'tonikgin_not_found_notice');
 
-    return;
+    // We have a problems. Return negative status.
+    return false;
 }
+
+// Everything is ok. Return positive status.
+return true;
