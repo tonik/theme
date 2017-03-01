@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-imagemin');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Assets Management
@@ -13,9 +15,9 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix
-        .sass('theme.scss');
-
-    mix
+        .sass('theme.scss')
+        .imagemin()
+        .copy('resources/fonts', 'public/fonts')
         .webpack('bootstrap.js')
         .webpack('theme.js');
 });
