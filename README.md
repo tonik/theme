@@ -1,9 +1,20 @@
-# Introduction
+# Tonik
+
+### The Tonik Starter Theme aims to modernize, organise and simplify some aspects of WordPress theme development. Take a look at what is waiting for you:
+
+- Child theme friendly **Autoloader**
+- Simple **Theme Service Container**
+- Enhanced **Templates Locator** with support for passing data
+- Use of PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
+- [Laravel Elixir](https://laravel.com/docs/5.3/elixir) as task runner for managing front-end assets
+- **SASS** and **Bootstrap**
+- JavaScript **ES6**
 
 ## Requirements
 
 Make sure you have all these dependences installed before moving on:
 
+- WordPress >= 4.7
 - PHP >= 5.6
 - [Composer](https://getcomposer.org)
 - [Node.js](https://nodejs.org)
@@ -27,11 +38,11 @@ $ git clone git@github.com:tonik/theme.git <theme-name>
 
 ## Resolving Dependences
 
-Install backend dependeces and generate autoloading file.
+Install back-end dependeces and generate autoloading file.
 
 ```bash
 # Install composer dependences.
-$ composer install
+$ composer install -o
 ```
 
 Install frontend dependences and task runner.
