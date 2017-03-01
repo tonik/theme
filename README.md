@@ -27,14 +27,14 @@ Make sure you have all these dependences installed before moving on:
 Create project via `composer create-project` composer command.
 
 ```bash
-$ composer create-project tonik/theme <theme-name>
+$ composer create-project tonik/tonik <theme-name>
 ```
 
 You can also directly download or clone repository to the `wp-content/themes` directory.
 
 ```bash
 # Clone repository to the <theme-name> folder.
-$ git clone git@github.com:tonik/theme.git <theme-name>
+$ git clone git@github.com:tonik/tonik.git <theme-name>
 ```
 
 ## Resolving Dependences
@@ -121,4 +121,4 @@ themes                              # — Root of your theme
 
 ## USAGE.md Boilerplate
 
-[USAGE.md](https://github.com/tonik/theme/blob/master/USAGE.md) provides "How to use" guide for themes created with this starter. Remember to properly fill this file before finalising project. Your clients will be grateful.
+[USAGE.md](https://github.com/tonik/tonik/blob/master/USAGE.md) provides "How to use" guide for themes created with this starter. Remember to properly fill this file before finalising project. Your clients will be grateful.
