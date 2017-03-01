@@ -5,6 +5,7 @@
 - Child theme friendly **Autoloader**
 - Simple **Theme Service Container**
 - Enhanced **Templates Locator** with support for passing data
+- Centralized Theme Configs
 - Use of PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
 - [Laravel Elixir](https://laravel.com/docs/5.3/elixir) as task runner for managing front-end assets
 - **SASS** and **Bootstrap**
