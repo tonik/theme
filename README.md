@@ -63,47 +63,48 @@ $ gulp --production
 This starter theme introduces "easy to follow" folder structure, which enforce to divide your theme logic into separate files.
 
 ```
-themes                              # → Root of your theme
-    ├── bootstrap/                  # → Files responsible for bootstrapping a theme
-    │   ├── compatibility.php       # → (don't edit manually)
-    │   ├── theme.php               # → (don't edit manually)
-    ├── config/
-    │   ├── theme.php
-    ├── public/
-    │   ├── images
-    │   ├── fonts
-    ├── resources/
-    │   ├── assets
-    │   │   ├── js
-    │   │   ├── sass
-    │   ├── templates
-    ├── src/
-    │   ├── Http/
-    │   │   ├── ajaxes.php
-    │   │   ├── assets.php
-    │   ├── Setup/
-    │   │   ├── actions.php
-    │   │   ├── filters.php
-    │   │   ├── navs.php
-    │   │   ├── shortcodes.php
-    │   │   ├── sidebars.php
-    │   │   ├── supports.php
-    │   │   ├── thumbnails.php
-    │   │   ├── widgets.php
-    │   ├── Structure/
-    │   │   ├── posttypes.php
-    │   │   ├── taxonomies.php
-    │   ├── helpers.php
-    ├── 404.php
-    ├── composer.json
-    ├── footer.php
-    ├── functions.php               # → Bootstrapping a theme. Initiates theme Autoloader and Composer (don't edit manually)
-    ├── gin                         # → (don't edit manually)
-    ├── header.php
-    ├── index.php
-    ├── package.json
-    ├── screenshot.png
-    ├── style.css                   # → (don't write any CSS declarations in here)
+themes                              # — Root of your theme
+    ├── bootstrap/                  # — Files responsible for bootstrapping a theme
+    │   ├── compatibility.php       # — Theme compatibility checker (don't edit)
+    │   ├── theme.php               # — Theme bootstraper script (don't edit)
+    ├── config/                     # — Configuration files
+    │   ├── theme.php               # — Theme configuration file
+    ├── public/                     # — Front-end compiled/builded assets (don't edit)
+    ├── resources/                  # — Resources files
+    │   ├── assets                  # — Front-end source assets
+    │   │   ├── js                  # — Theme JavaScript files
+    │   │   ├── sass                # — Theme Stylesheets files
+    │   │   ├── images              # — Theme images
+    │   │   ├── fonts               # — Theme fonts
+    │   ├── languages               # — Theme translations
+    │   ├── templates               # — Theme templates
+    ├── src/                        # — Theme application logic
+    │   ├── Http/                   # — Http layer of theme
+    │   │   ├── ajaxes.php          # — Theme ajaxes endpoints
+    │   │   ├── assets.php          # — Theme styles and scripts loading
+    │   ├── Setup/                  # — Setups for theme
+    │   │   ├── actions.php         # — Theme action hooks
+    │   │   ├── filters.php         # — Theme filter hooks
+    │   │   ├── navs.php            # — Theme navigation areas
+    │   │   ├── shortcodes.php      # — Theme shortcodes
+    │   │   ├── sidebars.php        # — Theme widgets areas
+    │   │   ├── supports.php        # — Theme supports
+    │   │   ├── thumbnails.php      # — Theme custom image sizes
+    │   │   ├── widgets.php         # — Theme custom widgets
+    │   ├── Structure/              # — Structures for theme
+    │   │   ├── posttypes.php       # — Theme custom post types
+    │   │   ├── taxonomies.php      # — Theme custom taxonomies
+    │   ├── helpers.php             # — Collection of helper functions
+    ├── 404.php                     # — 404 page controller
+    ├── composer.json               # — PHP dependences and PSR-4 Autoloading
+    ├── footer.php                  # — Footer partial template
+    ├── functions.php               # — Bootstrapping the theme. Initiates Autoloader and Composer (don't edit)
+    ├── gin                         # — CLI Runner (don't edit)
+    ├── header.php                  # — Header partial template
+    ├── index.php                   # — Index page controller
+    ├── package.json                # — NPM dependencies and scripts
+    ├── screenshot.png              # — Theme screenshot image
+    ├── style.css                   # — Theme details information (don't write any CSS declarations in here)
 ```
 
 ## USAGE.md Boilerplate
