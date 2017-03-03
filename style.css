@@ -1,11 +1,11 @@
 /*
-Theme Name: Tonik Theme
-Theme URI: https://github.com/tonik/tonik
-Description: Modern Starter Theme
-Version: 2.0.0-alpha.1
-Author: Tonik
-Author URI: http://tonik.pl
-Text Domain: tonik
+Theme Name: {{ theme.name }}
+Theme URI: {{ theme.url }}
+Description: {{ theme.description }}
+Version: {{ theme.version }}
+Author: {{ theme.author }}
+Author URI: {{ theme.author.url }}
+Text Domain: {{ theme.textdomain }}
 License: GPLv2 License
 License URI: https://wordpress.org/about/gpl/
 */
