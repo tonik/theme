@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -22,4 +22,4 @@ function example_action()
 {
     //
 }
-add_action('wp_footer', '{{ theme.namespace }}\Setup\example_action');
+add_action('wp_footer', 'App\Theme\Setup\example_action');

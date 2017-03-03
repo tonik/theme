@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-use function {{ theme.namespace }}\theme;
+use function App\Theme\theme;
 
 /**
  * Binds example service to the theme container.
@@ -26,4 +26,4 @@ function example_service_binding()
         return "service";
     });
 }
-add_action('init', '{{ theme.namespace }}\Setup\example_service_binding');
+add_action('init', 'App\Theme\Setup\example_service_binding');

@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-use function {{ theme.namespace }}\config;
+use function App\Theme\config;
 
 /**
  * Registers the widget areas.
@@ -28,4 +28,4 @@ function register_widget_areas()
         'description' => __('Website sidebar', config('textdomain')),
     ]);
 }
-add_action('widgets_init', '{{ theme.namespace }}\Setup\register_widget_areas');
+add_action('widgets_init', 'App\Theme\Setup\register_widget_areas');

@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }};
+namespace App\Theme;
 
 /*
 |------------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }};
 |
 */
 
-use function {{ theme.namespace }}\template;
+use function App\Theme\template;
 
 /**
  * Renders 404 page.

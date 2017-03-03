@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -21,4 +21,4 @@ function add_image_sizes()
 {
     // add_image_size('custom-thumbnail', 800, 600, true);
 }
-add_action('after_setup_theme', '{{ theme.namespace }}\Setup\add_image_sizes');
+add_action('after_setup_theme', 'App\Theme\Setup\add_image_sizes');

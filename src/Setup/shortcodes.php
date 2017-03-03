@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-use function {{ theme.namespace }}\template;
+use function App\Theme\template;
 
 /**
  * Renders a [button] shortcode.
@@ -34,4 +34,4 @@ function render_button_shortcode($atts, $content)
 
     return ob_get_clean();
 }
-add_shortcode('button', '{{ theme.namespace }}\Setup\render_button_shortcode');
+add_shortcode('button', 'App\Theme\Setup\render_button_shortcode');

@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Http;
+namespace App\Theme\Http;
 
 /*
 |-----------------------------------------------------------
@@ -27,5 +27,5 @@ function action_callback()
 
     die();
 }
-add_action('wp_ajax_my_action', '{{ theme.namespace }}\Http\action_callback');
-add_action('wp_ajax_nopriv_my_action', '{{ theme.namespace }}\Http\action_callback');
+add_action('wp_ajax_my_action', 'App\Theme\Http\action_callback');
+add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\action_callback');

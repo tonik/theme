@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Structure;
+namespace App\Theme\Structure;
 
 /*
 |-----------------------------------------------------------
@@ -12,7 +12,7 @@ namespace {{ theme.namespace }}\Structure;
 |
 */
 
-use function {{ theme.namespace }}\config;
+use function App\Theme\config;
 
 /**
  * Registers `book_genre` custom taxonomy.
@@ -44,4 +44,4 @@ function register_book_genre_taxonomy()
     //     ],
     // ]);
 }
-add_action('init', '{{ theme.namespace }}\Structure\register_book_genre_taxonomy');
+add_action('init', 'App\Theme\Structure\register_book_genre_taxonomy');

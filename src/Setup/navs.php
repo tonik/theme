@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |----------------------------------------------------------------
@@ -12,7 +12,7 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-use function {{ theme.namespace }}\config;
+use function App\Theme\config;
 
 /**
  * Registers navigation areas.
@@ -25,4 +25,4 @@ function register_navigation_areas()
         'primary' => __('Primary', config('textdomain')),
     ]);
 }
-add_action('after_setup_theme', '{{ theme.namespace }}\Setup\register_navigation_areas');
+add_action('after_setup_theme', 'App\Theme\Setup\register_navigation_areas');

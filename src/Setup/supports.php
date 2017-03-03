@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }}\Setup;
 |
 */
 
-use function {{ theme.namespace }}\config;
+use function App\Theme\config;
 
 /**
  * Adds various theme supports.
@@ -62,7 +62,7 @@ function add_theme_supports()
         'caption',
     ]);
 }
-add_action('after_setup_theme', '{{ theme.namespace }}\Setup\add_theme_supports');
+add_action('after_setup_theme', 'App\Theme\Setup\add_theme_supports');
 
 /**
  * Loads theme textdomain language files.
@@ -75,4 +75,4 @@ function load_textdomain() {
 
     load_theme_textdomain(config('textdomain'), "{$paths['directory']}/{$directories['languages']}");
 }
-add_action('after_setup_theme', '{{ theme.namespace }}\Setup\load_textdomain');
+add_action('after_setup_theme', 'App\Theme\Setup\load_textdomain');

@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Setup;
+namespace App\Theme\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -22,4 +22,4 @@ function modify_excerpt_length()
 {
     return 60;
 }
-add_filter('excerpt_length', '{{ theme.namespace }}\Setup\modify_excerpt_length');
+add_filter('excerpt_length', 'App\Theme\Setup\modify_excerpt_length');

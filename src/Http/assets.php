@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ theme.namespace }}\Http;
+namespace App\Theme\Http;
 
 /*
 |-----------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace {{ theme.namespace }}\Http;
 |
 */
 
-use function {{ theme.namespace }}\asset_path;
+use function App\Theme\asset_path;
 
 /**
  * Registers theme stylesheet files.
@@ -23,18 +23,18 @@ use function {{ theme.namespace }}\asset_path;
 function register_stylesheets() {
     wp_enqueue_style('theme-stylesheet', asset_path('css/theme.css'));
 }
-add_action('wp_enqueue_scripts', '{{ theme.namespace }}\Http\register_stylesheets');
+add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
 
 /**
  * Registers theme script files.
  *
  * @return void
  */
-function register_scripts() {
+function register_scripts() {g
     wp_enqueue_script('bootstrap', asset_path('js/bootstrap.js'), ['jquery'], null, true);
     wp_enqueue_script('theme-scripts', asset_path('js/theme.js'), ['bootstrap'], null, true);
 }
-add_action('wp_enqueue_scripts', '{{ theme.namespace }}\Http\register_scripts');
+add_action('wp_enqueue_scripts', 'App\Theme\Http\register_scripts');
 
 /**
  * Registers editor stylesheets.
@@ -44,7 +44,7 @@ add_action('wp_enqueue_scripts', '{{ theme.namespace }}\Http\register_scripts');
 function register_editor_stylesheets() {
     add_editor_style(asset_path('css/theme.css'));
 }
-add_action('admin_init', '{{ theme.namespace }}\Http\register_editor_stylesheets');
+add_action('admin_init', 'App\Theme\Http\register_editor_stylesheets');
 
 /**
  * Moves front-end jQuery script to the footer.
@@ -59,4 +59,4 @@ function move_jquery_to_the_footer($wp_scripts) {
         $wp_scripts->add_data('jquery-migrate', 'group', 1);
     }
 }
-add_action('wp_default_scripts', '{{ theme.namespace }}\Http\move_jquery_to_the_footer');
+add_action('wp_default_scripts', 'App\Theme\Http\move_jquery_to_the_footer');
