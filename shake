@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+    require $composer;
+
+    $cli = new Tonik\CLI\CLI(new League\CLImate\CLImate);
+
+    $shake = new Tonik\CLI\Command\Shake(new Symfony\Component\Finder\Finder);
+
+    return $cli->run($shake->dir(__DIR__));
+}
+
+throw new Exception("Please, install composer dependences before running CLI.");
