@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tonik/theme\n"
-"POT-Creation-Date: 2017-03-01 10:09+0100\n"
-"PO-Revision-Date: 2017-03-01 10:09+0100\n"
+"POT-Creation-Date: 2017-03-06 13:47+0100\n"
+"PO-Revision-Date: 2017-03-06 13:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Tonik\n"
 "Language: pl_PL\n"
@@ -36,6 +36,20 @@ msgid ""
 msgstr ""
 "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/gin'><strong>tonik/"
 "gin</strong></a>. Musisz ją zainstalować, aby używać tego motywu."
+
+#: index.php:36
+msgid "Tonik — WordPress Starter Theme"
+msgstr "Tonik — Motyw startowy dla WordPressa"
+
+#: index.php:37
+msgid ""
+"Tonik is a WordPress Starter Theme which aims to modernize, organize and "
+"simplify some aspects of WordPress theme development. Take a look at what is "
+"waiting for you:"
+msgstr ""
+"Tonik to motyw startowy dla WordPressa, który ma na celu zmodernizowanie, "
+"zorganizowanie i uproszenie niektórych aspektów budowania WordPressowych "
+"motywów. Sprawdź co na Ciebie czeka:"
 
 #: src/Setup/navs.php:25
 msgid "Primary"

@@ -14,8 +14,10 @@
     <article>
         <h1><?= $title ?></h1>
 
+        <?php do_action('theme/homepage/content/before') ?>
+
         <p><?= $content ?></p>
 
-        <p><?= do_shortcode("[button href='{$button['link']}']{$button['title']}[/button]") ?></p>
+        <?php do_action('theme/homepage/content/after') ?>
     </article>
 <?php get_footer() ?>
