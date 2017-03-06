@@ -1,6 +1,8 @@
 # Tonik
 
-### The Tonik Starter Theme aims to modernize, organise and simplify some aspects of WordPress theme development. Take a look at what is waiting for you:
+[![Build Status](https://travis-ci.org/tonik/tonik.svg?branch=master)](https://travis-ci.org/tonik/tonik)
+
+### Tonik Starter Theme aims to modernize, organize and simplify some aspects of WordPress theme development. Take a look at what is waiting for you:
 
 - Child theme friendly **Autoloader**
 - Simple **Theme Service Container**
@@ -30,7 +32,7 @@ Create project via `composer create-project` composer command.
 $ composer create-project tonik/tonik <theme-name>
 ```
 
-You can also directly download or clone repository to the `wp-content/themes` directory.
+You can also directly download or clone the repository to the `wp-content/themes` directory.
 
 ```bash
 # Clone repository to the <theme-name> folder.
@@ -39,21 +41,30 @@ $ git clone git@github.com:tonik/tonik.git <theme-name>
 
 ## Resolving Dependences
 
-Install back-end dependeces and generate autoloading file.
+Install back-end dependencies and generate an autoloading file.
 
 ```bash
-# Install composer dependences.
+# Install composer dependencies.
 $ composer install -o
 ```
 
-Install frontend dependences and task runner.
+Install frontend dependencies and task runner.
 
 ```bash
-# Install node dependences.
+# Install node dependencies.
 $ npm install
 ```
 
 # Development
+
+## Initializing a Theme
+
+Starter comes with simple CLI and `gin tonik:shake` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `php gin tonik:shake` command in the theme root directory. A setup wizard will guide you through the entire process.
+
+```bash
+# Run setup wizard.
+$ php gin tonik:shake
+```
 
 ## Compiling Assets
 
@@ -63,7 +74,7 @@ Theme uses [Laravel Elixir](https://laravel.com/docs/5.3/elixir) to compile it's
 # Run compile tasks.
 $ gulp
 
-# Watch for file changes and rund compile tasks.
+# Watch for file changes and run compile tasks.
 $ gulp watch
 
 # Compile assets for production.
@@ -72,7 +83,7 @@ $ gulp --production
 
 ## Folders and Files Structure
 
-This starter theme introduces "easy to follow" folder structure, which enforce to divide your theme logic into separate files.
+This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files.
 
 ```
 themes                              # — Root of your theme
@@ -121,4 +132,4 @@ themes                              # — Root of your theme
 
 ## USAGE.md Boilerplate
 
-[USAGE.md](https://github.com/tonik/tonik/blob/master/USAGE.md) provides "How to use" guide for themes created with this starter. Remember to properly fill this file before finalising project. Your clients will be grateful.
+[USAGE.md](https://github.com/tonik/tonik/blob/master/USAGE.md) provides "How to use" guide for themes created with this starter. Remember to properly fill this file before finalizing the project. Your clients will be grateful.
