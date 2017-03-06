@@ -9,6 +9,10 @@
             align-items: center;
             justify-content: center;
         }
+
+        article {
+            max-width: 300px;
+        }
     </style>
 
     <article>
