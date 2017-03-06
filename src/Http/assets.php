@@ -30,7 +30,7 @@ add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
  *
  * @return void
  */
-function register_scripts() {g
+function register_scripts() {
     wp_enqueue_script('bootstrap', asset_path('js/bootstrap.js'), ['jquery'], null, true);
     wp_enqueue_script('theme-scripts', asset_path('js/theme.js'), ['bootstrap'], null, true);
 }
