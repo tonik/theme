@@ -59,11 +59,11 @@ $ npm install
 
 ## Initializing a Theme
 
-Starter comes with simple CLI and `gin tonik:shake` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `php gin tonik:shake` command in the theme root directory. A setup wizard will guide you through the entire process.
+Starter comes with simple CLI and `shake` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `php shake` command in the theme root directory. A setup wizard will guide you through the entire process.
 
 ```bash
 # Run setup wizard.
-$ php gin tonik:shake
+$ php shake
 ```
 
 ## Compiling Assets
