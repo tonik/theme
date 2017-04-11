@@ -4,7 +4,7 @@ namespace App\Theme;
 
 /*
 |------------------------------------------------------------------
-| 404
+| 404 Controller
 |------------------------------------------------------------------
 |
 | The template controller for displaying 404 error pages.
@@ -15,11 +15,23 @@ namespace App\Theme;
 use function App\Theme\template;
 
 /**
+ * Renders post thumbnails by its formats.
+ *
+ * @see do_action('theme/index/header')
+ * @uses resources/templates/partials/header.tpl.php
+ */
+function render_header()
+{
+    template('partials/header', [
+        'title' => __('Not Found'),
+        'lead' => __('The page you are looking for no longer exists.'),
+    ]);
+}
+add_action('theme/index/header', 'App\Theme\render_header');
+
+/**
  * Renders 404 page.
  *
  * @uses resources/templates/index.tpl.php
  */
-template('index', [
-    'title' => __('Not Found'),
-    'content' => __('The page you are looking for no longer exists.'),
-]);
+template('index');

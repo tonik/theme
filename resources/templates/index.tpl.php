@@ -15,13 +15,19 @@
         }
     </style>
 
-    <article>
-        <h1><?= $title ?></h1>
+    <?php do_action('theme/index/header') ?>
 
-        <?php do_action('theme/homepage/content/before') ?>
+    <main>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post() ?>
 
-        <p><?= $content ?></p>
+                <?php do_action('theme/index/post/thumbnail') ?>
 
-        <?php do_action('theme/homepage/content/after') ?>
-    </article>
+            <?php endwhile ?>
+        <?php else : ?>
+
+            <?php do_action('theme/index/post/none') ?>
+
+        <?php endif ?>
+    </main>
 <?php get_footer() ?>

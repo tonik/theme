@@ -16,14 +16,22 @@ namespace App\Theme\Setup;
 use function App\Theme\theme;
 
 /**
- * Binds example service to the theme container.
+ * Binds genres of book service
+ * to the theme container.
  *
  * @return void
  */
-function example_service_binding()
+function bind_genres_of_book_service()
 {
-    theme()->bind('example_service', function () {
-        return "service";
+    /**
+     * Binds service for retrieving
+     * genre of the specific book.
+     *
+     * @param int $id  The `id` of the `book` type post
+     * @return \WP_term[]
+     */
+    theme()->bind('book/genres', function ($id) {
+        return wp_get_post_terms($id, 'book_grene');
     });
 }
-add_action('init', 'App\Theme\Setup\example_service_binding');
+add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
