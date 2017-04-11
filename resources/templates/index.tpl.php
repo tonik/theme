@@ -1,20 +1,4 @@
 <?php get_header() ?>
-    <style>
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        article {
-            max-width: 300px;
-        }
-    </style>
-
     <?php do_action('theme/index/header') ?>
 
     <main>
