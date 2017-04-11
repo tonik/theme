@@ -21,11 +21,11 @@ use function App\Theme\template;
  * @see do_action('theme/index/post/thumbnail')
  * @uses resources/templates/partials/post/thumbnail-{{format}}.tpl.php
  */
-function render_post_content()
+function render_post_thumbnail()
 {
-    template('partials/post/thumbnail', [get_post_format()]);
+    template(['partials/post/thumbnail', get_post_format()]);
 }
-add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_content');
+add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_thumbnail');
 
 /**
  * Renders empty post thumbnail
@@ -34,11 +34,11 @@ add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_content');
  * @see do_action('theme/index/post/none')
  * @uses resources/templates/partials/post/thumbnail-none.tpl.php
  */
-function render_empty_post_content()
+function render_empty_post_thumbnail()
 {
-    template('partials/post/thumbnail', ['none']);
+    template(['partials/post/thumbnail', 'none']);
 }
-add_action('theme/index/post/none', 'App\Theme\Setup\render_empty_post_content');
+add_action('theme/index/post/none', 'App\Theme\Setup\render_empty_post_thumbnail');
 
 /**
  * Renders [button] shortcode after homepage content.
