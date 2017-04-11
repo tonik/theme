@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tonik/theme\n"
-"POT-Creation-Date: 2017-03-06 13:47+0100\n"
-"PO-Revision-Date: 2017-03-06 13:49+0100\n"
+"POT-Creation-Date: 2017-04-11 11:43+0200\n"
+"PO-Revision-Date: 2017-04-11 11:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: Tonik\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-Basepath: ../..\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
@@ -18,6 +18,14 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: 404.php:24
+msgid "Not Found"
+msgstr "Nie znaleziono"
+
+#: 404.php:25
+msgid "The page you are looking for no longer exists."
+msgstr "Strona której szukasz nie istnieje."
 
 #: bootstrap/compatibility.php:39
 msgid ""
@@ -37,11 +45,11 @@ msgstr ""
 "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/gin'><strong>tonik/"
 "gin</strong></a>. Musisz ją zainstalować, aby używać tego motywu."
 
-#: index.php:36
+#: index.php:24
 msgid "Tonik — WordPress Starter Theme"
 msgstr "Tonik — Motyw startowy dla WordPressa"
 
-#: index.php:37
+#: index.php:25
 msgid ""
 "Tonik is a WordPress Starter Theme which aims to modernize, organize and "
 "simplify some aspects of WordPress theme development. Take a look at what is "
@@ -62,6 +70,98 @@ msgstr "Pasek boczny"
 #: src/Setup/sidebars.php:28
 msgid "Website sidebar"
 msgstr "Pasek boczny strony"
+
+#: src/Structure/posttypes.php:26
+msgid "Collection of books."
+msgstr "Kolekcja książek."
+
+#: src/Structure/posttypes.php:30 src/Structure/posttypes.php:32
+msgid "Books"
+msgstr "Książki"
+
+#: src/Structure/posttypes.php:31 src/Structure/posttypes.php:33
+msgid "Book"
+msgstr "Książka"
+
+#: src/Structure/posttypes.php:34
+msgid "Add New"
+msgstr "Dodaj nowy"
+
+#: src/Structure/posttypes.php:35
+msgid "Add New Book"
+msgstr "Dodaj nową książkę"
+
+#: src/Structure/posttypes.php:36
+msgid "New Book"
+msgstr "Nowa książka"
+
+#: src/Structure/posttypes.php:37
+msgid "Edit Book"
+msgstr "Edytuj ksiązkę"
+
+#: src/Structure/posttypes.php:38
+msgid "View Book"
+msgstr "Zobacz ksiązkę"
+
+#: src/Structure/posttypes.php:39
+msgid "All Books"
+msgstr "Wszystkie książki"
+
+#: src/Structure/posttypes.php:40
+msgid "Search Books"
+msgstr "Szukaj książek"
+
+#: src/Structure/posttypes.php:41
+msgid "Parent Books:"
+msgstr "Rodzice książki:"
+
+#: src/Structure/posttypes.php:42
+msgid "No books found."
+msgstr "Nie znaleziono książek."
+
+#: src/Structure/posttypes.php:43
+msgid "No books found in Trash."
+msgstr "Nie znaleziono książek w koszu."
+
+#: src/Structure/taxonomies.php:33
+msgid "Genres"
+msgstr "Gatunki"
+
+#: src/Structure/taxonomies.php:34 src/Structure/taxonomies.php:43
+msgid "Genre"
+msgstr "Gatunek"
+
+#: src/Structure/taxonomies.php:35
+msgid "Search Genres"
+msgstr "Szukaj gatunku"
+
+#: src/Structure/taxonomies.php:36
+msgid "All Genres"
+msgstr "Wszystkie gatunki"
+
+#: src/Structure/taxonomies.php:37
+msgid "Parent Genre"
+msgstr "Rodzic gatunku"
+
+#: src/Structure/taxonomies.php:38
+msgid "Parent Genre:"
+msgstr "Rodzic gatunku:"
+
+#: src/Structure/taxonomies.php:39
+msgid "Edit Genre"
+msgstr "Edytuj gatunek"
+
+#: src/Structure/taxonomies.php:40
+msgid "Update Genre"
+msgstr "Aktualizuj gatunek"
+
+#: src/Structure/taxonomies.php:41
+msgid "Add New Genre"
+msgstr "Dodaj nowy gatunek"
+
+#: src/Structure/taxonomies.php:42
+msgid "New Genre Name"
+msgstr "Nazwa nowego gatunku"
 
 #~ msgid ""
 #~ "Important! This theme requires <a href='//github.com/tonik/"
