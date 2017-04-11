@@ -4,14 +4,13 @@
 
 ### Tonik is a WordPress Starter Theme which aims to modernize, organize and simplify some aspects of WordPress theme development. Take a look at what is waiting for you:
 
-- Child theme friendly **Autoloader**
+- Centralized Theme Config
 - Simple **Theme Service Container**
+- Child Theme friendly **Autoloader**
+- Oriented for building with **Actions** and **Filters**
 - Enhanced **Templates Locator** with support for passing data
-- Centralized Theme Configs
-- Use of PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
+- Utilizes PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
 - [Laravel Elixir](https://laravel.com/docs/5.3/elixir) as task runner for managing front-end assets
-- **SASS** and **Bootstrap**
-- JavaScript **ES6**
 
 ## Requirements
 

@@ -50,4 +50,4 @@ function render_documentation_button()
 {
     echo do_shortcode("[button href='https://github.com/tonik/theme']Checkout documentation →[/button]");
 }
-add_action('theme/index/header/after', 'App\Theme\Setup\render_documentation_button');
+add_action('theme/header/after', 'App\Theme\Setup\render_documentation_button');

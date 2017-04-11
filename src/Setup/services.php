@@ -16,16 +16,14 @@ namespace App\Theme\Setup;
 use function App\Theme\theme;
 
 /**
- * Binds genres of book service
- * to the theme container.
+ * Binds genres of book service to the theme container.
  *
  * @return void
  */
 function bind_genres_of_book_service()
 {
     /**
-     * Binds service for retrieving
-     * genre of the specific book.
+     * Binds service for retrieving genre of the specific book.
      *
      * @param int $id  The `id` of the `book` type post
      * @return \WP_term[]
