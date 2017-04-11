@@ -16,29 +16,28 @@ namespace App\Theme\Setup;
 use function App\Theme\template;
 
 /**
- * Renders post thumbnails by its formats.
+ * Renders post contents by its formats.
  *
- * @see do_action('theme/index/post/thumbnail')
- * @uses resources/templates/partials/post/thumbnail-{{format}}.tpl.php
+ * @see do_action('theme/index/post/content')
+ * @uses resources/templates/partials/post/content-{{format}}.tpl.php
  */
-function render_post_thumbnail()
+function render_post_content()
 {
-    template(['partials/post/thumbnail', get_post_format()]);
+    template(['partials/post/content', get_post_format()]);
 }
-add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_thumbnail');
+add_action('theme/index/post/content', 'App\Theme\Setup\render_post_content');
 
 /**
- * Renders empty post thumbnail
- * where there is no posts.
+ * Renders empty post content where there is no posts.
  *
  * @see do_action('theme/index/post/none')
- * @uses resources/templates/partials/post/thumbnail-none.tpl.php
+ * @uses resources/templates/partials/post/content-none.tpl.php
  */
-function render_empty_post_thumbnail()
+function render_empty_post_content()
 {
-    template(['partials/post/thumbnail', 'none']);
+    template(['partials/post/content', 'none']);
 }
-add_action('theme/index/post/none', 'App\Theme\Setup\render_empty_post_thumbnail');
+add_action('theme/index/post/content/none', 'App\Theme\Setup\render_empty_post_content');
 
 /**
  * Renders [button] shortcode after homepage content.
