@@ -16,19 +16,7 @@ namespace App\Theme;
 use function App\Theme\template;
 
 /**
- * Renders [button] shortcode after homepage content.
- *
- * @see do_action('theme/homepage/content/after')
- * @uses resources/templates/shortcodes/button.tpl.php
- */
-function render_documentation_button()
-{
-    echo do_shortcode("[button href='https://github.com/tonik/theme']Checkout documentation →[/button]");
-}
-add_action('theme/homepage/content/after', 'App\Theme\render_documentation_button');
-
-/**
- * Renders homepage page.
+ * Renders index page.
  *
  * @uses resources/templates/index.tpl.php
  */

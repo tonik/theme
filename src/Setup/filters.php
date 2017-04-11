@@ -14,7 +14,7 @@ namespace App\Theme\Setup;
 */
 
 /**
- * Shortens posts excerpts to 60 character length.
+ * Shortens posts excerpts to 60 words.
  *
  * @return integer
  */

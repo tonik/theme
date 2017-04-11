@@ -20,11 +20,7 @@ use function App\Theme\template;
  *
  * @uses resources/templates/homepage.php
  */
-template('homepage', [
-    'title' => 'Not Found',
-    'content' => 'The page you are looking for no longer exists.',
-    'button' => [
-        'link' => 'https://github.com/tonik/theme',
-        'title' => 'Checkout documentation →'
-    ]
+template('index', [
+    'title' => __('Not Found'),
+    'content' => __('The page you are looking for no longer exists.'),
 ]);

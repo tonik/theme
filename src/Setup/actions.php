@@ -14,12 +14,13 @@ namespace App\Theme\Setup;
 */
 
 /**
- * Example action callback.
+ * Renders [button] shortcode after homepage content.
  *
- * @return void
+ * @see do_action('theme/index/content/after')
+ * @uses resources/templates/shortcodes/button.tpl.php
  */
-function example_action()
+function render_documentation_button()
 {
-    //
+    echo do_shortcode("[button href='https://github.com/tonik/theme']Checkout documentation →[/button]");
 }
-add_action('wp_footer', 'App\Theme\Setup\example_action');
+add_action('theme/index/content/after', 'App\Theme\Setup\render_documentation_button');
