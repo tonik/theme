@@ -15,9 +15,10 @@ require('laravel-elixir-imagemin');
 
 elixir(function(mix) {
     mix
+        .sass('foundation.scss')
         .sass('app.scss')
         .imagemin()
         .copy('resources/fonts', 'public/fonts')
-        .webpack('bootstrap.js')
+        .webpack('foundation.js')
         .webpack('app.js');
 });

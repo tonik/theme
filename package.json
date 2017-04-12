@@ -5,7 +5,8 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "motion-ui": "^1.2.0",
+    "foundation-sites": "^6.3.0",
     "gulp": "^3.9.1",
     "laravel-elixir": "^6.0.0-10",
     "laravel-elixir-imagemin": "^0.2.3",
