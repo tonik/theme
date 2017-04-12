@@ -11,7 +11,7 @@ return [
      | be in sync with `Text Domain:` entry inside style.css theme file.
      |
      */
-    'textdomain' => 'theme-textdomain',
+    'textdomain' => '{{ theme.textdomain }}',
 
     /**
      |--------------------------------------------------------------------------
