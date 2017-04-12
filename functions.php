@@ -9,7 +9,7 @@
 | composer packages, checks compatibility and loads theme files.
 | Most likely, you don't need to change anything in this file.
 | Your theme custom logic should be distributed across a
-| separated components in the `/src` directory.
+| separated components in the `/app` directory.
 |
 */
 
