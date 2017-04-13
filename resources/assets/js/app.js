@@ -4,3 +4,8 @@
  * we'll assign jQuery to the `$` variable ourself.
  */
 window.$ = jQuery.noConflict();
+
+/**
+ * Lets init Foundation scripts.
+ */
+$(document).foundation();

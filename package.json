@@ -1,15 +1,17 @@
 {
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "development": "webpack",
+    "production": "webpack",
+    "watch": "npm run development -- --watch"
   },
   "devDependencies": {
-    "motion-ui": "^1.2.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-es2015": "^6.24.1",
     "foundation-sites": "^6.3.0",
-    "gulp": "^3.9.1",
-    "laravel-elixir": "^6.0.0-10",
-    "laravel-elixir-imagemin": "^0.2.3",
-    "laravel-elixir-webpack-official": "^1.0.10"
+    "motion-ui": "^1.2.0",
+    "webpack": "^2.3.3"
   }
 }

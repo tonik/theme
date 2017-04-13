@@ -39,8 +39,3 @@ require('foundation-sites/dist/js/plugins/foundation.tabs');
 require('foundation-sites/dist/js/plugins/foundation.toggler');
 require('foundation-sites/dist/js/plugins/foundation.tooltip');
 require('foundation-sites/dist/js/plugins/foundation.zf.responsiveAccordionTabs');
-
-// Lets init Foundation scripts.
-;(function ($) {
-    $(document).foundation();
-})(jQuery);
