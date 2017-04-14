@@ -6,6 +6,8 @@ const autoprefixer = require('autoprefixer')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const sassRule = require('./rules/sass')
+const fontsRule = require('./rules/fonts')
+const imagesRule = require('./rules/images')
 const javascriptRule = require('./rules/javascript')
 
 const config = require('../config/app')
@@ -23,7 +25,9 @@ module.exports = {
     module: {
         rules: [
             sassRule,
-            javascriptRule
+            javascriptRule,
+            imagesRule,
+            fontsRule
         ]
     },
 

@@ -13,6 +13,7 @@
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "foundation-sites": "^6.3.0",
     "isdev": "^1.0.1",
     "motion-ui": "^1.2.0",
