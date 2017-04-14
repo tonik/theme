@@ -2,8 +2,8 @@
 
 @import 'variables';
 @import 'settings';
-@import 'node_modules/foundation-sites/scss/foundation';
-@import 'node_modules/motion-ui/src/motion-ui';
+@import '~foundation-sites/scss/foundation';
+@import '~motion-ui/src/motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-grid;
