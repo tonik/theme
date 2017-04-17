@@ -3,6 +3,7 @@ const isdev = require('isdev')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const sassRule = require('./rules/sass')
@@ -10,17 +11,19 @@ const fontsRule = require('./rules/fonts')
 const imagesRule = require('./rules/images')
 const javascriptRule = require('./rules/javascript')
 
-const config = require('../config/app')
+const config = require('./app.config')
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: (isdev && config.features.sourceMaps) ? 'source-map' : undefined,
 
     entry: config.assets,
 
     output: {
-        path: path.resolve(__dirname, '../public'),
-        filename: 'js/[name].js'
+        path: config.paths.public,
+        filename: config.outputs.javascript.filename
     },
+
+    externals: config.externals,
 
     module: {
         rules: [
@@ -36,14 +39,22 @@ module.exports = {
             minimize: !isdev,
         }),
 
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
-        }),
+        new ExtractTextPlugin(config.outputs.stylesheet),
 
-        new ExtractTextPlugin({
-            filename: 'css/[name].css'
+        new CleanWebpackPlugin(config.paths.public, {
+            root: config.paths.root
         })
     ]
+}
+
+if (! isdev) {
+    module.exports.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            comments: isdev,
+            compress: {
+                warnings: false
+            },
+            sourceMap: isdev
+        })
+    )
 }

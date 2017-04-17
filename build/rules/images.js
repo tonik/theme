@@ -1,10 +1,24 @@
 const isdev = require('isdev')
 
+const config = require('../app.config')
+
 module.exports = {
     test: /\.(png|jpe?g|gif|svg)$/,
-    loader: 'file-loader',
-    options: {
-        useRelativePath: true,
-        name: `[name].[ext]`
-    }
+    include: config.paths.assets,
+    use: [
+        {
+            loader: 'file-loader',
+            options: {
+                // useRelativePath: true,
+                name: config.outputs.image.filename
+            }
+        },
+
+        {
+            loader: 'img-loader',
+            options: {
+                enabled: !isdev
+            }
+        }
+    ]
 }

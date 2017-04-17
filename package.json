@@ -5,22 +5,27 @@
     "production": "NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
     "watch": "npm run development -- --watch"
   },
+  "dependencies": {
+    "foundation-sites": "^6.3.0",
+    "motion-ui": "^1.2.0"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.3.3",
     "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
-    "foundation-sites": "^6.3.0",
+    "img-loader": "^2.0.0",
     "isdev": "^1.0.1",
-    "motion-ui": "^1.2.0",
     "node-sass": "^4.5.2",
     "postcss-loader": "^1.3.3",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-merge": "^4.1.0"
   }
 }
