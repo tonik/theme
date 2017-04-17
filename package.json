@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
+    "dev": "npm run development",
     "development": "NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
+    "dev": "npm run production",
     "production": "NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
     "watch": "npm run development -- --watch"
   },

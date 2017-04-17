@@ -69,19 +69,19 @@ Starter comes with simple CLI and `shake` command, which allows you to easily fi
 $ php shake
 ```
 
-## Compiling Assets
+## Building a Theme
 
-Theme uses [Laravel Elixir](https://laravel.com/docs/5.3/elixir) to compile it's scripts and stylesheets.
+Theme uses [Webpack](https://webpack.js.org/) to compile and optimize it's scripts, stylesheets and assets.
 
 ```bash
-# Run compile tasks.
-$ gulp
+# Build theme for developlent.
+$ npm run dev
 
-# Watch for file changes and run compile tasks.
-$ gulp watch
+# Build theme for production.
+$ npm run prod
 
-# Compile assets for production.
-$ gulp --production
+# Watch for file changes and rebuild theme.
+$ npm run watch
 ```
 
 ## Folders and Files Structure
