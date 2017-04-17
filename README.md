@@ -71,10 +71,10 @@ $ php shake
 
 ## Building a Theme
 
-Theme uses [Webpack](https://webpack.js.org/) to compile and optimize it's scripts, stylesheets and assets.
+Theme uses [Webpack](https://webpack.js.org/) to compile and optimize its scripts, stylesheets and assets.
 
 ```bash
-# Build theme for developlent.
+# Build theme for development.
 $ npm run dev
 
 # Build theme for production.
