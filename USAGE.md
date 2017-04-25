@@ -9,6 +9,12 @@ This theme follow WordPress [recommended requirments](https://wordpress.org/abou
 - At least PHP >= 5.6 (PHP >= 7.0 is recommended)
 - WordPress 4.4
 
+## Dependences
+
+Theme is based on [Tonik WordPress Starter Theme](https://github.com/tonik/tonik) and requires this dependencies to operate:
+
+- [tonik/gin](https://github.com/tonik/gin) package >= 2.0.0
+
 ## Bootstrapping Theme
 
 Download or clone theme repository to the `wp-content/themes` directory.

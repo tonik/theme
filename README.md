@@ -62,7 +62,7 @@ $ npm install
 
 ## Initializing a Theme
 
-Starter comes with simple CLI and `shake` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `php shake` command in the theme root directory. A setup wizard will guide you through the entire process.
+Starter comes with simple CLI and `tonik` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `vendor/bin/tonik` command in the theme root directory. A setup wizard will guide you through the entire process.
 
 ```bash
 # Run setup wizard.
@@ -80,7 +80,7 @@ $ npm run dev
 # Build theme for production.
 $ npm run prod
 
-# Watch for file changes and rebuild theme.
+# Watch for file changes, rebuild theme and refresh the browser.
 $ npm run watch
 ```
 
@@ -127,7 +127,6 @@ themes                              # — Root of your theme
     ├── composer.json               # — PHP dependences and PSR-4 Autoloading
     ├── footer.php                  # — Footer partial template
     ├── functions.php               # — Bootstrapping the theme. Initiates Autoloader and Composer (don't edit)
-    ├── shake                       # — CLI Runner (don't edit)
     ├── header.php                  # — Header partial template
     ├── index.php                   # — Index page controller
     ├── package.json                # — NPM dependencies and scripts
