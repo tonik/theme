@@ -9,7 +9,7 @@ module.exports = {
         {
             loader: 'file-loader',
             options: {
-                // useRelativePath: true,
+                publicPath: '../',
                 name: config.outputs.image.filename
             }
         },

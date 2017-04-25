@@ -5,7 +5,7 @@
     "development": "NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
     "prod": "npm run production",
     "production": "NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
-    "watch": "npm run development -- --watch"
+    "watch": "npm run development -- --watch && webpack-dev-server --progress --colors"
   },
   "dependencies": {
     "foundation-sites": "^6.3.0",
@@ -17,6 +17,8 @@
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.3.3",
     "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -28,6 +30,7 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.4",
     "webpack-merge": "^4.1.0"
   }
 }

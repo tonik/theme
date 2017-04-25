@@ -1,12 +1,7 @@
 // Fonts
 
 // Variables, Mixins and Utilities
-@import "settings";
 @import "variables";
+@import "settings";
 
 // Theme components
-
-body {
-    display: flex;
-    background-image: url(../images/img.png);
-}

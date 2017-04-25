@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin")
 
 const sassRule = require('./rules/sass')
 const fontsRule = require('./rules/fonts')
@@ -14,7 +15,7 @@ const javascriptRule = require('./rules/javascript')
 const config = require('./app.config')
 
 module.exports = {
-    devtool: (isdev && config.features.sourceMaps) ? 'source-map' : undefined,
+    devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
 
     entry: config.assets,
 
@@ -24,6 +25,10 @@ module.exports = {
     },
 
     externals: config.externals,
+
+    performance: {
+        hints: false
+    },
 
     module: {
         rules: [
@@ -35,16 +40,16 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.LoaderOptionsPlugin({
-            minimize: !isdev,
-        }),
-
+        new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
         new ExtractTextPlugin(config.outputs.stylesheet),
-
-        new CleanWebpackPlugin(config.paths.public, {
-            root: config.paths.root
-        })
+        new CleanWebpackPlugin(config.paths.public, { root: config.paths.root }),
     ]
+}
+
+if (config.settings.browserSync) {
+    module.exports.plugins.push(
+        new BrowserSyncPlugin(config.settings.browserSync)
+    )
 }
 
 if (! isdev) {

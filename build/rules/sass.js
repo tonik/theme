@@ -32,7 +32,6 @@ module.exports = {
                 }
             }
         ],
-
         fallback: 'style-loader'
     })
 }
