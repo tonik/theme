@@ -1,17 +1,17 @@
 <?php
 
 /*
-|------------------------------------------------------------------
-| Bootstraping a Theme
-|------------------------------------------------------------------
-|
-| This file is responsible for bootstrapping your theme. Autoloads
-| composer packages, checks compatibility and loads theme files.
-| Most likely, you don't need to change anything in this file.
-| Your theme custom logic should be distributed across a
-| separated components in the `/app` directory.
-|
-*/
+ |------------------------------------------------------------------
+ | Bootstraping a Theme
+ |------------------------------------------------------------------
+ |
+ | This file is responsible for bootstrapping your theme. Autoloads
+ | composer packages, checks compatibility and loads theme files.
+ | Most likely, you don't need to change anything in this file.
+ | Your theme custom logic should be distributed across a
+ | separated components in the `/app` directory.
+ |
+ */
 
 // Require Composer's autoloading file
 // if it's present in theme directory.

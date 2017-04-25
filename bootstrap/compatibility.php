@@ -9,7 +9,7 @@
 | required to correct functioning. When package is missing
 | display error messages on the front and admin.
 |
- */
+*/
 
 // Include detect plugin function.
 if (! function_exists('is_plugin_active')) {
