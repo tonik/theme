@@ -66,7 +66,7 @@ Starter comes with simple CLI and `shake` command, which allows you to easily fi
 
 ```bash
 # Run setup wizard.
-$ php shake
+$ php vendor/bin/tonik
 ```
 
 ## Building a Theme
