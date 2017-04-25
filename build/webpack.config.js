@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin")
 
@@ -44,6 +45,12 @@ module.exports = {
         new ExtractTextPlugin(config.outputs.stylesheet),
         new CleanWebpackPlugin(config.paths.public, { root: config.paths.root }),
     ]
+}
+
+if (config.settings.styleLint) {
+    module.exports.plugins.push(
+        new StyleLintPlugin()
+    )
 }
 
 if (config.settings.browserSync) {
