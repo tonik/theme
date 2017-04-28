@@ -16,7 +16,7 @@ Take a look at what is waiting for you:
 - Oriented for building with [Actions](https://codex.wordpress.org/Glossary#Action) and [Filters](https://codex.wordpress.org/Glossary#Filter)
 - Enhanced [Templating](https://en.wikibooks.org/wiki/PHP_Programming/Why_Templating) with support for passing data
 
-## Requirements
+### Requirements
 
 Make sure you have all these dependences installed before moving on:
 
@@ -25,9 +25,9 @@ Make sure you have all these dependences installed before moving on:
 - [Composer](https://getcomposer.org)
 - [Node.js](https://nodejs.org)
 
-# Installation
+## Installation
 
-## Creating new Theme
+### Creating new Theme
 
 Create project via `composer create-project` composer command.
 
@@ -42,7 +42,7 @@ You can also directly download or clone the repository to the `wp-content/themes
 $ git clone git@github.com:tonik/tonik.git <theme-name>
 ```
 
-## Resolving Dependences
+### Resolving Dependences
 
 Install back-end dependencies and generate an autoloading file.
 
@@ -58,9 +58,9 @@ Install frontend dependencies and task runner.
 $ npm install
 ```
 
-# Development
+## Development
 
-## Initializing a Theme
+### Initializing a Theme
 
 Starter comes with simple CLI and `tonik` command, which allows you to easily fill theme details and information like name, description and project namespace. Simply call `vendor/bin/tonik` command in the theme root directory. A setup wizard will guide you through the entire process.
 
@@ -69,7 +69,7 @@ Starter comes with simple CLI and `tonik` command, which allows you to easily fi
 $ vendor/bin/tonik
 ```
 
-## Building a Theme
+### Building a Theme
 
 Theme uses [Webpack](https://webpack.js.org/) to compile and optimize its scripts, stylesheets and assets.
 
@@ -84,7 +84,7 @@ $ npm run prod
 $ npm run watch
 ```
 
-## Folders and Files Structure
+### Folders and Files Structure
 
 This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files.
 
@@ -134,6 +134,20 @@ themes                              # — Root of your theme
     ├── style.css                   # — Theme details information (don't write any CSS declarations in here)
 ```
 
-## USAGE.md Boilerplate
+### USAGE.md Boilerplate
 
 [USAGE.md](https://github.com/tonik/tonik/blob/master/USAGE.md) provides "How to use" guide for themes created with this starter. Remember to properly fill this file before finalizing the project. Your clients will be grateful.
+
+## Contributing
+
+Great that you are considering supporting the project. You have a lot of ways to help us grow. We appreciate all contributions, even the smallest.
+
+- Report an issue
+- Propose a feature
+- Send a pull request
+- Star project on the [GitHub](https://github.com/tonik/tonik)
+- Tell about project around your community
+
+## License
+
+The Tonik Starter Theme is licensed under the [MIT license](http://opensource.org/licenses/MIT).
