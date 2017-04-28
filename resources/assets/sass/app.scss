@@ -1,8 +1,13 @@
-// Base i Here we should import Foundation settings, our own variables and mixins
+@charset 'utf-8';
+
+// Basic application includes. Here we should import Foundation
+// settings, our own variables, mixins and functions.
 @import 'settings';
 @import 'variables';
 
-// Theme components
+// Now we can include all of theme specific components.
+// Delete demo styles below and you are ready
+// to start building your theme styling.
 .main {
     padding: 6rem 0;
 

@@ -1,11 +1,17 @@
 @charset 'utf-8';
 
+// Before importing Foundation framework itself we will
+// overwrite its settings with out own variables.
 @import 'variables';
 @import 'settings';
 
+// Import Foundation framework and its dependences.
 @import '~foundation-sites/scss/foundation';
 @import '~motion-ui/src/motion-ui';
 
+// Now we will include all of the Foundation components.
+// Comment out unused components for keeping
+// CSS output file as light as can.
 @include foundation-global-styles;
 // @include foundation-grid;
 @include foundation-flex-grid;
