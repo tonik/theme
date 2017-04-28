@@ -14,6 +14,23 @@ namespace App\Theme\Setup;
 */
 
 /**
+ * Hides sidebar on index template on specific views.
+ *
+ * @see apply_filters('theme/index/sidebar/visibility')
+ * @see apply_filters('theme/single/sidebar/visibility')
+ */
+function show_index_sidebar($status)
+{
+    if (is_404() || is_page()) {
+        return false;
+    }
+
+    return $status;
+}
+add_filter('theme/index/sidebar/visibility', 'App\Theme\Setup\show_index_sidebar');
+add_filter('theme/single/sidebar/visibility', 'App\Theme\Setup\show_index_sidebar');
+
+/**
  * Shortens posts excerpts to 60 words.
  *
  * @return integer

@@ -8,8 +8,10 @@
             <?php endif ?>
         </div>
 
-        <div class="small-12 medium-3 column">
-            <?php do_action('theme/single/sidebar') ?>
-        </div>
+        <?php if (apply_filters('theme/single/sidebar/visibility', true)): ?>
+            <div class="small-12 medium-3 column">
+                <?php do_action('theme/single/sidebar') ?>
+            </div>
+        <?php endif ?>
     </div>
 <?php get_footer() ?>

@@ -1,6 +1,4 @@
-// Fonts
-
-// Variables, Mixins and Utilities
+// Base i Here we should import Foundation settings, our own variables and mixins
 @import 'settings';
 @import 'variables';
 
@@ -8,15 +6,11 @@
 .main {
     padding: 6rem 0;
 
-    > * + * {
-        margin-top: 3rem;
-    }
+    & > * + * { margin-top: 3rem; }
 }
 
 .posts {
-    > * + * {
-        margin-top: 1.5rem;
-    }
+    & > * + * { margin-top: 1.5rem; }
 }
 
 .footer {
