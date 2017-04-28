@@ -1,11 +1,11 @@
 <article>
     <header>
-        <h2><?php the_title() ?></h2>
+        <h1><?php the_title() ?></h1>
     </header>
 
-    <div><?php the_content() ?></div>
-
-    <footer>
+    <small>
         <time><?php the_date() ?></time>
-    </footer>
+    </small>
+
+    <p><?php the_content() ?></p>
 </article>

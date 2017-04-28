@@ -26,6 +26,8 @@ function register_widget_areas()
         'id' => 'sidebar',
         'name' => __('Sidebar', config('textdomain')),
         'description' => __('Website sidebar', config('textdomain')),
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
     ]);
 }
 add_action('widgets_init', 'App\Theme\Setup\register_widget_areas');

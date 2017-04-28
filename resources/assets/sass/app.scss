@@ -5,3 +5,21 @@
 @import 'variables';
 
 // Theme components
+.main {
+    padding: 6rem 0;
+
+    > * + * {
+        margin-top: 3rem;
+    }
+}
+
+.posts {
+    > * + * {
+        margin-top: 1.5rem;
+    }
+}
+
+.footer {
+    border-top: 1px solid $medium-gray;
+    padding-top: 3rem;
+}

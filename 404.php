@@ -30,6 +30,17 @@ function render_header()
 add_action('theme/index/header', 'App\Theme\render_header');
 
 /**
+ * Hides sidebar on index template.
+ *
+ * @see apply_filters('theme/index/sidebar/visibility')
+ */
+function hide_sidebar()
+{
+    return false;
+}
+add_filter('theme/index/sidebar/visibility', 'App\Theme\hide_sidebar');
+
+/**
  * Renders 404 page.
  *
  * @uses resources/templates/index.tpl.php

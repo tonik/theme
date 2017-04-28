@@ -2,6 +2,7 @@
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
     "indentation": 4,
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "scss/selector-no-redundant-nesting-selector": null
   }
 }
