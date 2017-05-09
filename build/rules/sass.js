@@ -8,7 +8,7 @@ const config = require('../app.config')
 
 module.exports = {
     test: /\.s[ac]ss$/,
-    include: config.paths.assets,
+    include: config.paths.sass,
     loader: ExtractTextPlugin.extract({
         use: [
             {
@@ -21,7 +21,7 @@ module.exports = {
             {
                 loader: 'postcss-loader',
                 options: {
-                    sourceMap: isdev,
+                    sourceMap: true,
                     plugins: () => [autoprefixer]
                 }
             },
@@ -29,7 +29,7 @@ module.exports = {
             {
                 loader: 'sass-loader',
                 options: {
-                    sourceMap: isdev
+                    sourceMap: true
                 }
             }
         ],

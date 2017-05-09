@@ -3,15 +3,19 @@ const isdev = require('isdev')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin")
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
 
 const sassRule = require('./rules/sass')
 const fontsRule = require('./rules/fonts')
 const imagesRule = require('./rules/images')
 const javascriptRule = require('./rules/javascript')
+const externalFontsRule = require('./rules/external.fonts')
+const externalImagesRule = require('./rules/external.images')
 
 const config = require('./app.config')
 
@@ -34,16 +38,26 @@ module.exports = {
     module: {
         rules: [
             sassRule,
-            javascriptRule,
+            fontsRule,
             imagesRule,
-            fontsRule
+            javascriptRule,
+            externalFontsRule,
+            externalImagesRule,
         ]
     },
 
     plugins: [
         new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
-        new ExtractTextPlugin(config.outputs.stylesheet),
-        new CleanWebpackPlugin(config.paths.public, { root: config.paths.root }),
+        new ExtractTextPlugin(config.outputs.css),
+        new CleanPlugin(config.paths.public, { root: config.paths.root }),
+        new CopyPlugin([{
+            from: {
+                glob: `${config.paths.images}/**/*`,
+                flatten: true,
+                dot: false
+            },
+            to: config.outputs.image.filename,
+        }]),
     ]
 }
 
@@ -67,6 +81,16 @@ if (! isdev) {
                 warnings: false
             },
             sourceMap: isdev
+        })
+    )
+
+    module.exports.plugins.push(
+        new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            optipng: { optimizationLevel: 7 },
+            gifsicle: { optimizationLevel: 3 },
+            pngquant: { quality: '65-90', speed: 4 },
+            svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
         })
     )
 }

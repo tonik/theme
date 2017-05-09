@@ -12,7 +12,12 @@ module.exports = merge({
     paths: {
         root: path.resolve(__dirname, '../'),
         public: path.resolve(__dirname, '../public'),
-        assets: path.resolve(__dirname, '../resources/assets')
+        sass: path.resolve(__dirname, '../resources/assets/sass'),
+        fonts: path.resolve(__dirname, '../resources/assets/fonts'),
+        images: path.resolve(__dirname, '../resources/assets/images'),
+        javascript: path.resolve(__dirname, '../resources/assets/javascript'),
+        relative: '../',
+        external: /node_modules|bower_components/
     },
 
     /**
@@ -29,10 +34,10 @@ module.exports = merge({
      * @type {Object}
      */
     outputs: {
-        stylesheet: { filename: 'css/[name].css' },
-        javascript: { filename: 'js/[name].js' },
+        css: { filename: 'css/[name].css' },
+        font: { filename: 'fonts/[name].[ext]' },
         image: { filename: 'images/[name].[ext]' },
-        font: { filename: 'fonts/[name].[ext]' }
+        javascript: { filename: 'js/[name].js' }
     },
 
     /**

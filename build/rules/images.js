@@ -1,24 +1,13 @@
-const isdev = require('isdev')
-
 const config = require('../app.config')
 
 module.exports = {
     test: /\.(png|jpe?g|gif|svg)$/,
-    include: config.paths.assets,
-    use: [
-        {
-            loader: 'file-loader',
-            options: {
-                publicPath: '../',
-                name: config.outputs.image.filename
-            }
-        },
-
-        {
-            loader: 'img-loader',
-            options: {
-                enabled: !isdev
-            }
-        }
-    ]
+    include: config.paths.images,
+    loader: 'file-loader',
+    options: {
+        publicPath: config.paths.relative,
+        name: config.outputs.image.filename,
+        emitFile: false,
+        limit: 10000
+    }
 }
