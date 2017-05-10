@@ -1,5 +1,9 @@
 const config = require('../app.config')
 
+/**
+ * Internal application image files. This rule exceptionally don't emit its files,
+ * because they are handled by copy and image-minify webpack plugins.
+ */
 module.exports = {
     test: /\.(png|jpe?g|gif|svg)$/,
     include: config.paths.images,
@@ -7,7 +11,6 @@ module.exports = {
     options: {
         publicPath: config.paths.relative,
         name: config.outputs.image.filename,
-        emitFile: false,
-        limit: 10000
+        emitFile: false
     }
 }

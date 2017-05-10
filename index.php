@@ -16,7 +16,7 @@ namespace App\Theme;
 use function App\Theme\template;
 
 /**
- * Renders post thumbnails by its formats.
+ * Renders index page header.
  *
  * @see do_action('theme/index/header')
  * @uses resources/templates/partials/header.tpl.php

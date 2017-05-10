@@ -15,7 +15,7 @@ namespace App\Theme;
 use function App\Theme\template;
 
 /**
- * Renders page header.
+ * Renders 404 page header.
  *
  * @see do_action('theme/index/header')
  * @uses resources/templates/partials/header.tpl.php

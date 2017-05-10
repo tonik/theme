@@ -20,21 +20,45 @@ const externalImagesRule = require('./rules/external.images')
 const config = require('./app.config')
 
 module.exports = {
+    /**
+     * Should the source map be generated?
+     * @type {string|undefined}
+     */
     devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
 
+    /**
+     * Application entry files for building.
+     * @type {Object}
+     */
     entry: config.assets,
 
+    /**
+     * Output settings for application scripts.
+     * @type {Object}
+     */
     output: {
         path: config.paths.public,
         filename: config.outputs.javascript.filename
     },
 
+    /**
+     * External objects which should be accessible inside application scripts.
+     * @type {Object}
+     */
     externals: config.externals,
 
+    /**
+     * Performance settings to speed up build times.
+     * @type {Object}
+     */
     performance: {
         hints: false
     },
 
+    /**
+     * Build rules to handle application assset files.
+     * @type {Object}
+     */
     module: {
         rules: [
             sassRule,
@@ -46,6 +70,10 @@ module.exports = {
         ]
     },
 
+    /**
+     * Common plugins which should run on every build.
+     * @type {Array}
+     */
     plugins: [
         new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
         new ExtractTextPlugin(config.outputs.css),
@@ -61,25 +89,35 @@ module.exports = {
     ]
 }
 
+/**
+ * Adds Stylelint plugin if
+ * linting is configured.
+ */
 if (config.settings.styleLint) {
     module.exports.plugins.push(
         new StyleLintPlugin()
     )
 }
 
+/**
+ * Adds BrowserSync plugin when
+ * settings are configured.
+ */
 if (config.settings.browserSync) {
     module.exports.plugins.push(
         new BrowserSyncPlugin(config.settings.browserSync)
     )
 }
 
+/**
+ * Adds optimalizing plugins when
+ * generating production build.
+ */
 if (! isdev) {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             comments: isdev,
-            compress: {
-                warnings: false
-            },
+            compress: { warnings: false },
             sourceMap: isdev
         })
     )
