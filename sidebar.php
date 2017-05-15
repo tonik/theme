@@ -7,8 +7,8 @@ namespace App\Theme;
 | Sidebar Controller
 |------------------------------------------------------------------
 |
-| The template controller for displaying search form markup.
-| This is displayed when website content was not found.
+| The template controller for displaying website sidebar,
+| i.e. area where you can assign various widgets.
 |
 */
 

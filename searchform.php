@@ -8,7 +8,7 @@ namespace App\Theme;
 |------------------------------------------------------------------
 |
 | The template controller for displaying search form markup.
-| This is displayed when website content was not found.
+| It is displayed when website posts was not found.
 |
 */
 

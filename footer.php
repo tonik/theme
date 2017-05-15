@@ -7,7 +7,8 @@ namespace App\Theme;
 | Footer Controller
 |------------------------------------------------------------------
 |
-| Template controller for outputting layout's closing markup.
+| Controller for outputting layout's closing markup. Template
+| rendered here should include `wp_footer()` function call.
 |
 */
 

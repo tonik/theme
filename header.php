@@ -7,7 +7,8 @@ namespace App\Theme;
 | Header Controller
 |------------------------------------------------------------------
 |
-| Template controller for outputting layout's opening markup.
+| Controller for outputting layout's opening markup. Template
+| rendered here should include `wp_head()` function call.
 |
 */
 

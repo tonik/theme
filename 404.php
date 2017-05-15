@@ -8,7 +8,7 @@ namespace App\Theme;
 |------------------------------------------------------------------
 |
 | The template controller for displaying 404 error pages.
-| This is displayed when website content was not found.
+| It is displayed when website content was not found.
 |
 */
 
