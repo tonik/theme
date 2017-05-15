@@ -1,10 +1,21 @@
-<!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php wp_head(); ?>
-    </head>
-    <body <?php body_class(); ?>>
-        <main class="main">
+<?php
+
+namespace App\Theme;
+
+/*
+|------------------------------------------------------------------
+| Header Controller
+|------------------------------------------------------------------
+|
+| Template controller for outputting layout's opening markup.
+|
+*/
+
+use function App\Theme\template;
+
+/**
+ * Renders layout's header.
+ *
+ * @uses resources/templates/layout/header.tpl.php
+ */
+template('layout/header');

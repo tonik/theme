@@ -1,16 +1,21 @@
-            <div class="row">
-                <div class="column">
-                    <footer class="footer">
-                        <ul class="menu simple">
-                            <li><a href="<?= get_home_url() ?>">Index</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Github</a></li>
-                        </ul>
-                    </footer>
-                </div>
-            </div>
+<?php
 
-            <?php wp_footer(); ?>
-        </main>
-    </body>
-</html>
+namespace App\Theme;
+
+/*
+|------------------------------------------------------------------
+| Footer Controller
+|------------------------------------------------------------------
+|
+| Template controller for outputting layout's closing markup.
+|
+*/
+
+use function App\Theme\template;
+
+/**
+ * Renders layout's footer.
+ *
+ * @uses resources/templates/layout/footer.tpl.php
+ */
+template('layout/footer');
