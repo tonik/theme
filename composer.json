@@ -1,14 +1,14 @@
 {
-    "name": "tonik/tonik",
-    "description": "Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.",
-    "keywords": ["tonik", "theme", "gin", "wordpress", "wordpress-starter-theme", "wordpress-theme"],
-    "license": "MIT",
-    "type": "wordpress-theme",
-    "require": {
-        "php": ">=5.6",
-        "tonik/gin": "2.0.0-beta.2"
-    },
-    "require-dev": {
-        "tonik/cli": "2.0.0-beta.2"
-    }
+  "name": "tonik/tonik",
+  "description": "Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.",
+  "keywords": ["tonik", "theme", "gin", "wordpress", "wordpress-starter-theme", "wordpress-theme"],
+  "license": "MIT",
+  "type": "wordpress-theme",
+  "require": {
+    "php": ">=5.6",
+    "tonik/gin": "2.0.0-beta.2"
+  },
+  "require-dev": {
+    "tonik/cli": "2.0.0-beta.2"
+  }
 }

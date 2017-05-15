@@ -1,21 +1,21 @@
 {
-    "assets": {
-        "app": [
-            "./resources/assets/js/app.js",
-            "./resources/assets/sass/app.scss"
-        ],
+  "assets": {
+    "app": [
+      "./resources/assets/js/app.js",
+      "./resources/assets/sass/app.scss"
+    ],
 
-        "foundation": [
-            "./resources/assets/js/foundation.js",
-            "./resources/assets/sass/foundation.scss"
-        ]
-    },
+    "foundation": [
+      "./resources/assets/js/foundation.js",
+      "./resources/assets/sass/foundation.scss"
+    ]
+  },
 
-    "settings": {
-        "browserSync": {
-            "host": "localhost",
-            "port": 3000,
-            "proxy": "http://localhost:8080/"
-        }
+  "settings": {
+    "browserSync": {
+      "host": "localhost",
+      "port": 3000,
+      "proxy": "http://localhost:8080/"
     }
+  }
 }
