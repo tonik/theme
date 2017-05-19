@@ -27,7 +27,7 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
 
 $config = require __DIR__ . '/../config/app.php';
 
-$theme->bind('config', function () {
+$theme->bind('config', function () use ($config) {
     new Tonik\Gin\Foundation\Config($config);
 });
 
