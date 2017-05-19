@@ -28,8 +28,8 @@ function bind_genres_of_book_service()
      * @param int $id  The `id` of the `book` type post
      * @return \WP_term[]
      */
-    theme()->bind('book/genres', function ($id) {
-        return wp_get_post_terms($id, 'book_grene');
+    theme()->bind('book/genres', function ($theme, $args) {
+        return wp_get_post_terms($args['id'], 'book_grene');
     });
 }
 add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
