@@ -14,6 +14,7 @@ namespace App\Theme\Setup;
 */
 
 use function App\Theme\theme;
+use Tonik\Gin\Foundation\Theme;
 
 /**
  * Binds genres of book service to the theme container.
@@ -23,13 +24,15 @@ use function App\Theme\theme;
 function bind_genres_of_book_service()
 {
     /**
-     * Binds service for retrieving genre of the specific book.
+     * Binds service for retrieving genres of the specific book.
      *
-     * @param int $id  The `id` of the `book` type post
+     * @param \Tonik\Gin\Foundation\Theme $theme  Instance of the service container
+     * @param array $parameters  Parameters passed on service resolving
+     *
      * @return \WP_term[]
      */
-    theme()->bind('book/genres', function ($theme, $args) {
-        return wp_get_post_terms($args['id'], 'book_grene');
+    theme()->bind('book/genres', function (Theme $theme, $parameters) {
+        return wp_get_post_terms($parameters['id'], 'book_grene');
     });
 }
 add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
