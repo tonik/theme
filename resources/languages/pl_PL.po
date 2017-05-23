@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tonik/theme\n"
-"POT-Creation-Date: 2017-04-11 11:43+0200\n"
-"PO-Revision-Date: 2017-04-11 11:48+0200\n"
+"POT-Creation-Date: 2017-05-23 09:28+0200\n"
+"PO-Revision-Date: 2017-05-23 09:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: Tonik\n"
 "Language: pl_PL\n"
@@ -19,13 +19,117 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: 404.php:24
+#: 404.php:26
 msgid "Not Found"
 msgstr "Nie znaleziono"
 
-#: 404.php:25
+#: 404.php:27
 msgid "The page you are looking for no longer exists."
 msgstr "Strona której szukasz nie istnieje."
+
+#: app/Setup/navs.php:25
+msgid "Primary"
+msgstr "Podstawowe"
+
+#: app/Setup/sidebars.php:27
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: app/Setup/sidebars.php:28
+msgid "Website sidebar"
+msgstr "Pasek boczny strony"
+
+#: app/Structure/posttypes.php:26
+msgid "Collection of books."
+msgstr "Kolekcja książek."
+
+#: app/Structure/posttypes.php:30 app/Structure/posttypes.php:32
+msgid "Books"
+msgstr "Książki"
+
+#: app/Structure/posttypes.php:31 app/Structure/posttypes.php:33
+msgid "Book"
+msgstr "Książka"
+
+#: app/Structure/posttypes.php:34
+msgid "Add New"
+msgstr "Dodaj nowy"
+
+#: app/Structure/posttypes.php:35
+msgid "Add New Book"
+msgstr "Dodaj nową książkę"
+
+#: app/Structure/posttypes.php:36
+msgid "New Book"
+msgstr "Nowa książka"
+
+#: app/Structure/posttypes.php:37
+msgid "Edit Book"
+msgstr "Edytuj ksiązkę"
+
+#: app/Structure/posttypes.php:38
+msgid "View Book"
+msgstr "Zobacz ksiązkę"
+
+#: app/Structure/posttypes.php:39
+msgid "All Books"
+msgstr "Wszystkie książki"
+
+#: app/Structure/posttypes.php:40
+msgid "Search Books"
+msgstr "Szukaj książek"
+
+#: app/Structure/posttypes.php:41
+msgid "Parent Books:"
+msgstr "Rodzice książki:"
+
+#: app/Structure/posttypes.php:42
+msgid "No books found."
+msgstr "Nie znaleziono książek."
+
+#: app/Structure/posttypes.php:43
+msgid "No books found in Trash."
+msgstr "Nie znaleziono książek w koszu."
+
+#: app/Structure/taxonomies.php:33
+msgid "Genres"
+msgstr "Gatunki"
+
+#: app/Structure/taxonomies.php:34 app/Structure/taxonomies.php:43
+msgid "Genre"
+msgstr "Gatunek"
+
+#: app/Structure/taxonomies.php:35
+msgid "Search Genres"
+msgstr "Szukaj gatunku"
+
+#: app/Structure/taxonomies.php:36
+msgid "All Genres"
+msgstr "Wszystkie gatunki"
+
+#: app/Structure/taxonomies.php:37
+msgid "Parent Genre"
+msgstr "Rodzic gatunku"
+
+#: app/Structure/taxonomies.php:38
+msgid "Parent Genre:"
+msgstr "Rodzic gatunku:"
+
+#: app/Structure/taxonomies.php:39
+msgid "Edit Genre"
+msgstr "Edytuj gatunek"
+
+#: app/Structure/taxonomies.php:40
+msgid "Update Genre"
+msgstr "Aktualizuj gatunek"
+
+#: app/Structure/taxonomies.php:41
+msgid "Add New Genre"
+msgstr "Dodaj nowy gatunek"
+
+#: app/Structure/taxonomies.php:42
+msgid "New Genre Name"
+msgstr "Nazwa nowego gatunku"
 
 #: bootstrap/compatibility.php:39
 msgid ""
@@ -45,123 +149,23 @@ msgstr ""
 "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/gin'><strong>tonik/"
 "gin</strong></a>. Musisz ją zainstalować, aby używać tego motywu."
 
-#: index.php:24
+#: index.php:27
 msgid "Tonik — WordPress Starter Theme"
 msgstr "Tonik — Motyw startowy dla WordPressa"
 
-#: index.php:25
+#: index.php:28
 msgid ""
 "Tonik is a WordPress Starter Theme which aims to modernize, organize and "
-"simplify some aspects of WordPress theme development. Take a look at what is "
-"waiting for you:"
+"enhance some aspects of WordPress theme development. Take a look at what is "
+"waiting for you."
 msgstr ""
 "Tonik to motyw startowy dla WordPressa, który ma na celu zmodernizowanie, "
 "zorganizowanie i uproszenie niektórych aspektów budowania WordPressowych "
-"motywów. Sprawdź co na Ciebie czeka:"
+"motywów. Sprawdź co na Ciebie czeka."
 
-#: src/Setup/navs.php:25
-msgid "Primary"
-msgstr "Podstawowe"
-
-#: src/Setup/sidebars.php:27
-msgid "Sidebar"
-msgstr "Pasek boczny"
-
-#: src/Setup/sidebars.php:28
-msgid "Website sidebar"
-msgstr "Pasek boczny strony"
-
-#: src/Structure/posttypes.php:26
-msgid "Collection of books."
-msgstr "Kolekcja książek."
-
-#: src/Structure/posttypes.php:30 src/Structure/posttypes.php:32
-msgid "Books"
-msgstr "Książki"
-
-#: src/Structure/posttypes.php:31 src/Structure/posttypes.php:33
-msgid "Book"
-msgstr "Książka"
-
-#: src/Structure/posttypes.php:34
-msgid "Add New"
-msgstr "Dodaj nowy"
-
-#: src/Structure/posttypes.php:35
-msgid "Add New Book"
-msgstr "Dodaj nową książkę"
-
-#: src/Structure/posttypes.php:36
-msgid "New Book"
-msgstr "Nowa książka"
-
-#: src/Structure/posttypes.php:37
-msgid "Edit Book"
-msgstr "Edytuj ksiązkę"
-
-#: src/Structure/posttypes.php:38
-msgid "View Book"
-msgstr "Zobacz ksiązkę"
-
-#: src/Structure/posttypes.php:39
-msgid "All Books"
-msgstr "Wszystkie książki"
-
-#: src/Structure/posttypes.php:40
-msgid "Search Books"
-msgstr "Szukaj książek"
-
-#: src/Structure/posttypes.php:41
-msgid "Parent Books:"
-msgstr "Rodzice książki:"
-
-#: src/Structure/posttypes.php:42
-msgid "No books found."
-msgstr "Nie znaleziono książek."
-
-#: src/Structure/posttypes.php:43
-msgid "No books found in Trash."
-msgstr "Nie znaleziono książek w koszu."
-
-#: src/Structure/taxonomies.php:33
-msgid "Genres"
-msgstr "Gatunki"
-
-#: src/Structure/taxonomies.php:34 src/Structure/taxonomies.php:43
-msgid "Genre"
-msgstr "Gatunek"
-
-#: src/Structure/taxonomies.php:35
-msgid "Search Genres"
-msgstr "Szukaj gatunku"
-
-#: src/Structure/taxonomies.php:36
-msgid "All Genres"
-msgstr "Wszystkie gatunki"
-
-#: src/Structure/taxonomies.php:37
-msgid "Parent Genre"
-msgstr "Rodzic gatunku"
-
-#: src/Structure/taxonomies.php:38
-msgid "Parent Genre:"
-msgstr "Rodzic gatunku:"
-
-#: src/Structure/taxonomies.php:39
-msgid "Edit Genre"
-msgstr "Edytuj gatunek"
-
-#: src/Structure/taxonomies.php:40
-msgid "Update Genre"
-msgstr "Aktualizuj gatunek"
-
-#: src/Structure/taxonomies.php:41
-msgid "Add New Genre"
-msgstr "Dodaj nowy gatunek"
-
-#: src/Structure/taxonomies.php:42
-msgid "New Genre Name"
-msgstr "Nazwa nowego gatunku"
+#: resources/templates/partials/searchform.tpl.php:8
+msgid "Searching for..."
+msgstr "Szukam…"
 
 #~ msgid ""
 #~ "Important! This theme requires <a href='//github.com/tonik/"
