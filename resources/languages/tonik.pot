@@ -1,0 +1,189 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tonik/theme\n"
+"POT-Creation-Date: 2017-05-23 09:51+0200\n"
+"PO-Revision-Date: 2017-04-11 11:48+0200\n"
+"Last-Translator: \n"
+"Language-Team: Tonik\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: 404.php:26
+msgid "Not Found"
+msgstr ""
+
+#: 404.php:27
+msgid "The page you are looking for no longer exists."
+msgstr ""
+
+#: app/Setup/navs.php:25
+msgid "Primary"
+msgstr ""
+
+#: app/Setup/sidebars.php:27
+msgid "Sidebar"
+msgstr ""
+
+#: app/Setup/sidebars.php:28
+msgid "Website sidebar"
+msgstr ""
+
+#: app/Structure/posttypes.php:26
+msgid "Collection of books."
+msgstr ""
+
+#: app/Structure/posttypes.php:30 app/Structure/posttypes.php:32
+msgid "Books"
+msgstr ""
+
+#: app/Structure/posttypes.php:31 app/Structure/posttypes.php:33
+msgid "Book"
+msgstr ""
+
+#: app/Structure/posttypes.php:34
+msgid "Add New"
+msgstr ""
+
+#: app/Structure/posttypes.php:35
+msgid "Add New Book"
+msgstr ""
+
+#: app/Structure/posttypes.php:36
+msgid "New Book"
+msgstr ""
+
+#: app/Structure/posttypes.php:37
+msgid "Edit Book"
+msgstr ""
+
+#: app/Structure/posttypes.php:38
+msgid "View Book"
+msgstr ""
+
+#: app/Structure/posttypes.php:39
+msgid "All Books"
+msgstr ""
+
+#: app/Structure/posttypes.php:40
+msgid "Search Books"
+msgstr ""
+
+#: app/Structure/posttypes.php:41
+msgid "Parent Books:"
+msgstr ""
+
+#: app/Structure/posttypes.php:42
+msgid "No books found."
+msgstr ""
+
+#: app/Structure/posttypes.php:43
+msgid "No books found in Trash."
+msgstr ""
+
+#: app/Structure/taxonomies.php:33
+msgid "Genres"
+msgstr ""
+
+#: app/Structure/taxonomies.php:34 app/Structure/taxonomies.php:43
+msgid "Genre"
+msgstr ""
+
+#: app/Structure/taxonomies.php:35
+msgid "Search Genres"
+msgstr ""
+
+#: app/Structure/taxonomies.php:36
+msgid "All Genres"
+msgstr ""
+
+#: app/Structure/taxonomies.php:37
+msgid "Parent Genre"
+msgstr ""
+
+#: app/Structure/taxonomies.php:38
+msgid "Parent Genre:"
+msgstr ""
+
+#: app/Structure/taxonomies.php:39
+msgid "Edit Genre"
+msgstr ""
+
+#: app/Structure/taxonomies.php:40
+msgid "Update Genre"
+msgstr ""
+
+#: app/Structure/taxonomies.php:41
+msgid "Add New Genre"
+msgstr ""
+
+#: app/Structure/taxonomies.php:42
+msgid "New Genre Name"
+msgstr ""
+
+#: bootstrap/compatibility.php:39
+msgid ""
+"Important! This theme requires <a href='//github.com/tonik/"
+"gin'><strong>tonik/gin</strong></a> package. Please, make sure it's "
+"installed and active."
+msgstr ""
+
+#: bootstrap/compatibility.php:52
+msgid ""
+"We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin</"
+"strong></a> package. You have to install it before using this theme."
+msgstr ""
+
+#: index.php:27
+msgid "Tonik — WordPress Starter Theme"
+msgstr ""
+
+#: index.php:28
+msgid ""
+"Tonik is a WordPress Starter Theme which aims to modernize, organize and "
+"enhance some aspects of WordPress theme development. Take a look at what is "
+"waiting for you."
+msgstr ""
+
+#: resources/templates/partials/searchform.tpl.php:8
+msgid "Searching for..."
+msgstr ""
+
+#~ msgid ""
+#~ "Important! This theme requires <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin package</strong></a>. Please, make sure it's "
+#~ "installed and active."
+#~ msgstr ""
+#~ "Uwaga! Ten motyw wymaga paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a> do poprawnego działania. Upewnij, że "
+#~ "jest ona zainstalowana i aktywna."
+
+#~ msgid ""
+#~ "We could not find <a href='//github.com/tonik/gin'><strong>tonik/gin "
+#~ "package</strong></a>. You have to install it before using this theme."
+#~ msgstr ""
+#~ "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a>. Musisz ją zainstalować, aby używać "
+#~ "tego motywu."
+
+#~ msgid ""
+#~ "We could not find <strong><a href='//github.com/tonik/gin'>tonik/gin "
+#~ "package</a></strong>. You have to install it before using this theme."
+#~ msgstr ""
+#~ "Nie mogliśmy znaleźć paczki <a href='//github.com/tonik/"
+#~ "gin'><strong>tonik/gin</strong></a>. Musisz ją zainstalować, aby używać "
+#~ "tego motywu."
+
+#~ msgid "Website sidebar."
+#~ msgstr "Pasek boczny strony."
