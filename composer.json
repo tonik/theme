@@ -9,6 +9,6 @@
     "tonik/gin": "2.0.0-rc.1"
   },
   "require-dev": {
-    "tonik/cli": "2.0.0-beta.2"
+    "tonik/cli": "2.0.0-rc.1"
   }
 }
