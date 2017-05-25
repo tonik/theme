@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Setup;
+namespace App\Theme\Structure;
 
 /*
 |----------------------------------------------------------------
@@ -25,4 +25,4 @@ function register_navigation_areas()
         'primary' => __('Primary', config('textdomain')),
     ]);
 }
-add_action('after_setup_theme', 'App\Theme\Setup\register_navigation_areas');
+add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');

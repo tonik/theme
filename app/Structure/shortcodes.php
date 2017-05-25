@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Setup;
+namespace App\Theme\Structure;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +34,4 @@ function render_button_shortcode($atts, $content)
 
     return ob_get_clean();
 }
-add_shortcode('button', 'App\Theme\Setup\render_button_shortcode');
+add_shortcode('button', 'App\Theme\Structure\render_button_shortcode');
