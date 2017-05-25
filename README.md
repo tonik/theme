@@ -18,10 +18,10 @@ Take a look at what is waiting for you:
 
 ### Requirements
 
-Make sure you have all these dependences installed before moving on:
+Tonik Starter Theme follows [WordPress recommended requirements](https://wordpress.org/about/requirements/). Make sure you have all these dependences installed before moving on:
 
 - WordPress >= 4.7
-- PHP >= 5.6
+- PHP >= 7.0
 - [Composer](https://getcomposer.org)
 - [Node.js](https://nodejs.org)
 
