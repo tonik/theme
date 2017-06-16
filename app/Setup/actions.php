@@ -19,7 +19,7 @@ use function App\Theme\template;
  * Renders post thumbnail by its formats.
  *
  * @see do_action('theme/index/post/thumbnail')
- * @uses resources/templates/partials/post/thumbnail-{{format}}.tpl.php
+ * @uses resources/templates/partials/post/thumbnail-{format}.tpl.php
  */
 function render_post_thumbnail()
 {
@@ -31,7 +31,7 @@ add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_thumbnail'
  * Renders post contents by its formats.
  *
  * @see do_action('theme/index/post/content')
- * @uses resources/templates/partials/post/content-{{format}}.tpl.php
+ * @uses resources/templates/partials/post/content-{format}.tpl.php
  */
 function render_post_content()
 {
@@ -68,7 +68,7 @@ add_action('theme/single/sidebar', 'App\Theme\Setup\render_sidebar');
 /**
  * Renders [button] shortcode after homepage content.
  *
- * @see do_action('theme/index/content/after')
+ * @see do_action('theme/header/end')
  * @uses resources/templates/shortcodes/button.tpl.php
  */
 function render_documentation_button()

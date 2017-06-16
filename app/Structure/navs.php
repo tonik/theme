@@ -4,7 +4,7 @@ namespace App\Theme\Structure;
 
 /*
 |----------------------------------------------------------------
-| Theme Navigations
+| Theme Navigation Areas
 |----------------------------------------------------------------
 |
 | This file is for registering your theme custom navigation areas

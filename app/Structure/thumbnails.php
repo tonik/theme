@@ -19,6 +19,6 @@ namespace App\Theme\Structure;
  */
 function add_image_sizes()
 {
-    // add_image_size('custom-thumbnail', 800, 600, true);
+    add_image_size('custom-thumbnail', 800, 600, true);
 }
 add_action('after_setup_theme', 'App\Theme\Structure\add_image_sizes');

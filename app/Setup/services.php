@@ -17,11 +17,11 @@ use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
 
 /**
- * Binds genres of book service to the theme container.
+ * Binding handler for book's genres service.
  *
  * @return void
  */
-function bind_genres_of_book_service()
+function bind_books_genres_service()
 {
     /**
      * Binds service for retrieving genres of the specific book.
@@ -35,4 +35,4 @@ function bind_genres_of_book_service()
         return wp_get_post_terms($parameters['id'], 'book_grene');
     });
 }
-add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
+add_action('init', 'App\Theme\Setup\bind_books_genres_service');

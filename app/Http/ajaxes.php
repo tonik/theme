@@ -15,7 +15,7 @@ namespace App\Theme\Http;
 
 /**
  * My AJAX action callback.
-
+ *
  * @return void
  */
 function action_callback()

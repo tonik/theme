@@ -50,7 +50,7 @@ add_action('admin_init', 'App\Theme\Http\register_editor_stylesheets');
 
 /**
  * Moves front-end jQuery script to the footer.
-
+ *
  * @param  \WP_Scripts $wp_scripts
  * @return void
  */
