@@ -3,7 +3,6 @@
 node_modules
 npm-debug.log
 vendor
-composer.lock
 
 .DS_Store
 Thumbs.db
