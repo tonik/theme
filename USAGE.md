@@ -1,3 +1,5 @@
+> This is a template file with instructions about usage of this theme. You should fill it accordingly and distribute along with theme files.
+
 # Theme Installation and Usage
 
 You should be familiar with the command line to efficiently install this theme. Required is also a knowledge about [Composer](https://getcomposer.org) and [NPM](https://www.npmjs.com/) package managers.
