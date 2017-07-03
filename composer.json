@@ -6,10 +6,10 @@
   "type": "wordpress-theme",
   "require": {
     "php": ">=7.0",
-    "tonik/gin": "2.0.0-rc.2"
+    "tonik/gin": "2.0.0"
   },
   "require-dev": {
-    "tonik/cli": "2.0.0-rc.2"
+    "tonik/cli": "2.0.0"
   },
   "scripts": {
     "post-create-project-cmd": [
