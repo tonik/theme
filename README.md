@@ -25,6 +25,10 @@ Tonik Starter Theme follows [WordPress recommended requirements](https://wordpre
 - [Composer](https://getcomposer.org)
 - [Node.js](https://nodejs.org)
 
+### Documentation
+
+Comprehensive documentation of the starter is available at http://labs.tonik.pl/theme/
+
 ## Installation
 
 ### Creating new Theme
