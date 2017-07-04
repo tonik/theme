@@ -10,10 +10,5 @@
   },
   "require-dev": {
     "tonik/cli": "2.0.0"
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "php vendor/bin/tonik"
-    ]
   }
 }
