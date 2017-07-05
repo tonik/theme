@@ -2,9 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "npm run development",
-    "development": "NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
+    "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
     "prod": "npm run production",
-    "production": "NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
     "watch": "npm run development -- --watch && webpack-dev-server --progress --colors"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "browser-sync-webpack-plugin": "^1.1.4",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
