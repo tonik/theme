@@ -17,22 +17,24 @@ use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
 
 /**
- * Binding handler for book's genres service.
+ * Service handler for retrieving posts of specific post type.
  *
  * @return void
  */
-function bind_books_genres_service()
+function bind_books_service()
 {
     /**
-     * Binds service for retrieving genres of the specific book.
+     * Binds service for retrieving posts of specific post type.
      *
      * @param \Tonik\Gin\Foundation\Theme $theme  Instance of the service container
      * @param array $parameters  Parameters passed on service resolving
      *
-     * @return \WP_term[]
+     * @return \WP_Post[]
      */
-    theme()->bind('book/genres', function (Theme $theme, $parameters) {
-        return wp_get_post_terms($parameters['id'], 'book_grene');
+    theme()->bind('books', function (Theme $theme, $parameters) {
+        return new WP_Query([
+            'post_type' => 'book',
+        ]);
     });
 }
-add_action('init', 'App\Theme\Setup\bind_books_genres_service');
+add_action('init', 'App\Theme\Setup\bind_books_service');
