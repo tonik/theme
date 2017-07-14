@@ -32,7 +32,7 @@ function bind_books_service()
      * @return \WP_Post[]
      */
     theme()->bind('books', function (Theme $theme, $parameters) {
-        return new WP_Query([
+        return new \WP_Query([
             'post_type' => 'book',
         ]);
     });
