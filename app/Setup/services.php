@@ -15,6 +15,7 @@ namespace App\Theme\Setup;
 
 use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
+use WP_Query;
 
 /**
  * Service handler for retrieving posts of specific post type.
