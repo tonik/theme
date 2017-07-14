@@ -15,6 +15,7 @@ namespace App\Theme\Setup;
 
 use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
+use WP_Query;
 
 /**
  * Service handler for retrieving posts of specific post type.
@@ -32,7 +33,7 @@ function bind_books_service()
      * @return \WP_Post[]
      */
     theme()->bind('books', function (Theme $theme, $parameters) {
-        return new \WP_Query([
+        return new WP_Query([
             'post_type' => 'book',
         ]);
     });
