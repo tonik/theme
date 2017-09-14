@@ -15,8 +15,8 @@ namespace App\Theme;
 use function App\Theme\template;
 
 /**
- * Renders layout's header.
+ * Renders layout's head.
  *
- * @uses resources/templates/layout/header.tpl.php
+ * @uses resources/templates/layout/head.tpl.php
  */
-template('layout/header');
+template('layout/head');
