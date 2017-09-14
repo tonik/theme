@@ -21,7 +21,6 @@ use function App\Theme\asset_path;
  * @return void
  */
 function register_stylesheets() {
-    wp_enqueue_style('foundation', asset_path('css/foundation.css'));
     wp_enqueue_style('app', asset_path('css/app.css'));
 }
 add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
@@ -32,8 +31,7 @@ add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
  * @return void
  */
 function register_scripts() {
-    wp_enqueue_script('foundation', asset_path('js/foundation.js'), ['jquery'], null, true);
-    wp_enqueue_script('app', asset_path('js/app.js'), ['foundation'], null, true);
+    wp_enqueue_script('app', asset_path('js/app.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', 'App\Theme\Http\register_scripts');
 
@@ -43,7 +41,6 @@ add_action('wp_enqueue_scripts', 'App\Theme\Http\register_scripts');
  * @return void
  */
 function register_editor_stylesheets() {
-    add_editor_style(asset_path('css/foundation.css'));
     add_editor_style(asset_path('css/app.css'));
 }
 add_action('admin_init', 'App\Theme\Http\register_editor_stylesheets');
