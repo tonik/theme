@@ -57,7 +57,7 @@ module.exports = merge({
      */
     settings: {
         sourceMaps: true,
-        styleLint: true,
+        styleLint: {},
         browserSync: {
             host: 'localhost',
             port: 3000,

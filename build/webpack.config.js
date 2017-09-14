@@ -95,7 +95,7 @@ module.exports = {
  */
 if (config.settings.styleLint) {
     module.exports.plugins.push(
-        new StyleLintPlugin()
+        new StyleLintPlugin(config.settings.styleLint)
     )
 }
 
