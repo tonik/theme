@@ -1,11 +1,7 @@
 <article>
-    <header>
-        <h1><?php the_title() ?></h1>
-    </header>
+    <h1><?php the_title() ?></h1>
 
-    <small>
-        <time><?php the_date() ?></time>
-    </small>
+    <time><small><?php the_date() ?></small></time>
 
     <p><?php the_content() ?></p>
 </article>

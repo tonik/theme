@@ -8,3 +8,6 @@
     </head>
     <body <?php body_class(); ?>>
         <main class="main">
+            <nav>
+                <a href="<?= get_home_url() ?>"><h1>WordPress Starter Theme</h1></a>
+            </nav>

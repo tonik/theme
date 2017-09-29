@@ -1,8 +1,9 @@
-<header class="callout large">
+<header class="header">
     <?php do_action('theme/header/start') ?>
 
     <h2><?= $title ?></h2>
-    <p class="lead"><?= $lead ?></p>
+
+    <p><?= $lead ?></p>
 
     <?php do_action('theme/header/end') ?>
 </header>

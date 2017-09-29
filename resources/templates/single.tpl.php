@@ -1,6 +1,8 @@
 <?php get_header() ?>
-    <div class="row">
-        <div class="column">
+
+<section class="section">
+    <div class="wrapper">
+        <div class="content">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post() ?>
                     <?php do_action('theme/single/content') ?>
@@ -9,9 +11,9 @@
         </div>
 
         <?php if (apply_filters('theme/single/sidebar/visibility', true)): ?>
-            <div class="small-12 medium-3 column">
-                <?php do_action('theme/single/sidebar') ?>
-            </div>
+            <?php do_action('theme/single/sidebar') ?>
         <?php endif ?>
     </div>
+</section>
+
 <?php get_footer() ?>
