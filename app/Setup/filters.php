@@ -9,7 +9,7 @@ namespace App\Theme\Setup;
 |
 | This file purpose is to include your theme various
 | filters hooks, which changes output or behaviour
-| of diffrent parts of WordPress functions.
+| of different parts of WordPress functions.
 |
 */
 
