@@ -1,5 +1,4 @@
 const isdev = require('isdev')
-const stylelint = require("stylelint")
 const autoprefixer = require('autoprefixer')
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
