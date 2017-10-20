@@ -105,7 +105,11 @@ if (config.settings.styleLint) {
  */
 if (config.settings.browserSync) {
     module.exports.plugins.push(
-        new BrowserSyncPlugin(config.settings.browserSync)
+        new BrowserSyncPlugin(config.settings.browserSync, {
+            // Prevent BrowserSync from reloading the page
+            // and let Webpack Dev Server take care of this.
+            reload: false
+        })
     )
 }
 

@@ -61,7 +61,18 @@ module.exports = merge({
         browserSync: {
             host: 'localhost',
             port: 3000,
-            proxy: 'http://localhost:8080/'
+            proxy: 'http://localhost:8080/',
+            open: false,
+            reloadDelay: 500,
+            files: [
+                "*.php",
+                "app/**/*.php",
+                "resources/templates/**/*.php",
+                "resources/assets/js/**/*.js",
+                "resources/assets/sass/**/*.{sass,scss}",
+                "resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}",
+                "resources/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}"
+            ]
         }
     }
 }, config)
