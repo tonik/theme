@@ -7,8 +7,9 @@
 Take a look at what is waiting for you:
 
 - [ES6](https://babeljs.io/learn-es2015/) for JavaScript
-- [SASS](http://sass-lang.com/) and [Foundation CSS Framework](http://foundation.zurb.com/sites/docs/)
+- [SASS](http://sass-lang.com/) preprocessor for CSS
 - [Webpack](https://webpack.js.org/) for managing, compiling and optimizing theme asset files
+- Simple [CLI](https://github.com/tonik/cli) for quickly initializing a new project
 - Utilizes PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
 - Simple [Theme Service Container](http://symfony.com/doc/2.0/glossary.html#term-service-container)
 - Child Theme friendly [Autoloader](https://en.wikipedia.org/wiki/Autoload)
