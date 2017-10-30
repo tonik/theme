@@ -18,8 +18,7 @@ use function Tonik\Theme\App\template;
 /**
  * Renders index page header.
  *
- * @see do_action('theme/index/header')
- * @uses resources/templates/partials/header.tpl.php
+ * @see resources/templates/index.tpl.php
  */
 function render_header()
 {
@@ -33,6 +32,6 @@ add_action('theme/index/header', 'Tonik\Theme\Index\render_header');
 /**
  * Renders index page.
  *
- * @uses resources/templates/index.tpl.php
+ * @see resources/templates/index.tpl.php
  */
 template('index');

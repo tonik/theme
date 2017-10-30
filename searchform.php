@@ -17,6 +17,6 @@ use function Tonik\Theme\App\template;
 /**
  * Renders search form.
  *
- * @uses resources/templates/partials/searchform.tpl.php
+ * @see resources/templates/partials/searchform.tpl.php
  */
 template('partials/searchform');
