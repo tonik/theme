@@ -8,6 +8,8 @@
     "watch": "npm run development -- --watch && webpack-dev-server --progress --colors"
   },
   "dependencies": {
+    "eslint": "^4.10.0",
+    "eslint-loader": "^1.9.0",
     "foundation-sites": "^6.3.0",
     "motion-ui": "^1.2.0"
   },

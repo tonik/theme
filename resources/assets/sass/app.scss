@@ -5,67 +5,67 @@
 // Delete demo styles below and you are ready
 // to start building your theme styling.
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    line-height: 1.5;
+  font-family: sans-serif;
+  line-height: 1.5;
 }
 
 .main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 6rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 0;
 
-    & > * + * { margin-top: 3rem; }
+  & > * + * { margin-top: 3rem; }
 }
 
 .wrapper {
-    display: flex;
+  display: flex;
 
-    & > * + * { margin-left: 3em; }
+  & > * + * { margin-left: 3em; }
 }
 
 .header {
-    padding: 3em;
-    background-color: $primary;
+  padding: 3em;
+  background-color: $primary;
 }
 
 .content {
-    flex: 0 0 75%;
-    max-width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 
 .sidebar {
-    flex: 0 0 25%;
-    max-width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 }
 
 .footer {
-    border-top: 2px solid $primary;
-    padding-top: 1em;
+  border-top: 2px solid $primary;
+  padding-top: 1em;
 
-    ul {
-        padding: 0;
+  ul {
+    padding: 0;
 
-        & > * + * { margin-left: 0.5em; }
+    & > * + * { margin-left: 0.5em; }
 
-        li { display: inline-block; }
-    }
+    li { display: inline-block; }
+  }
 }
 
 .posts {
-    & > * + * { margin-top: 1.5rem; }
+  & > * + * { margin-top: 1.5rem; }
 }
 
 .thumbnail {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
