@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme;
+namespace Tonik\Theme\Footer;
 
 /*
 |------------------------------------------------------------------
@@ -12,7 +12,7 @@ namespace App\Theme;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders layout's footer.

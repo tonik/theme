@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme;
+namespace Tonik\Theme\NotFound;
 
 /*
 |------------------------------------------------------------------
@@ -12,7 +12,7 @@ namespace App\Theme;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders 404 page header.
@@ -27,7 +27,7 @@ function render_header()
         'lead' => __('The page you are looking for no longer exists.'),
     ]);
 }
-add_action('theme/index/header', 'App\Theme\render_header');
+add_action('theme/index/header', 'Tonik\Theme\NotFound\render_header');
 
 /**
  * Renders 404 page.

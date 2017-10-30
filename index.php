@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme;
+namespace Tonik\Theme\Index;
 
 /*
 |------------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace App\Theme;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders index page header.
@@ -28,7 +28,7 @@ function render_header()
         'lead' => __('Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development. Take a look at what is waiting for you.'),
     ]);
 }
-add_action('theme/index/header', 'App\Theme\render_header');
+add_action('theme/index/header', 'Tonik\Theme\Index\render_header');
 
 /**
  * Renders index page.

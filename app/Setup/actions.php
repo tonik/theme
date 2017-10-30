@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
 /*
 |-----------------------------------------------------------
@@ -13,7 +13,7 @@ namespace App\Theme\Setup;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders post thumbnail by its formats.
@@ -25,7 +25,7 @@ function render_post_thumbnail()
 {
     template(['partials/post/thumbnail', get_post_format()]);
 }
-add_action('theme/index/post/thumbnail', 'App\Theme\Setup\render_post_thumbnail');
+add_action('theme/index/post/thumbnail', 'Tonik\Theme\App\Setup\render_post_thumbnail');
 
 /**
  * Renders post contents by its formats.
@@ -37,7 +37,7 @@ function render_post_content()
 {
     template(['partials/post/content', get_post_format()]);
 }
-add_action('theme/single/content', 'App\Theme\Setup\render_post_content');
+add_action('theme/single/content', 'Tonik\Theme\App\Setup\render_post_content');
 
 /**
  * Renders empty post content where there is no posts.
@@ -49,7 +49,7 @@ function render_empty_content()
 {
     template(['partials/index/content', 'none']);
 }
-add_action('theme/index/content/none', 'App\Theme\Setup\render_empty_content');
+add_action('theme/index/content/none', 'Tonik\Theme\App\Setup\render_empty_content');
 
 /**
  * Renders sidebar content.
@@ -62,8 +62,8 @@ function render_sidebar()
 {
     get_sidebar();
 }
-add_action('theme/index/sidebar', 'App\Theme\Setup\render_sidebar');
-add_action('theme/single/sidebar', 'App\Theme\Setup\render_sidebar');
+add_action('theme/index/sidebar', 'Tonik\Theme\App\Setup\render_sidebar');
+add_action('theme/single/sidebar', 'Tonik\Theme\App\Setup\render_sidebar');
 
 /**
  * Renders [button] shortcode after homepage content.
@@ -75,4 +75,4 @@ function render_documentation_button()
 {
     echo do_shortcode("[button href='https://github.com/tonik/tonik']Checkout documentation →[/button]");
 }
-add_action('theme/header/end', 'App\Theme\Setup\render_documentation_button');
+add_action('theme/header/end', 'Tonik\Theme\App\Setup\render_documentation_button');

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Theme;
+namespace Tonik\Theme\Searchform;
 
 /*
 |------------------------------------------------------------------
-| Search Form Controller
+| Searchform Controller
 |------------------------------------------------------------------
 |
 | The template controller for displaying search form markup.
@@ -12,7 +12,7 @@ namespace App\Theme;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders search form.
