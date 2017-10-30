@@ -1,4 +1,8 @@
 /*
+
+This file is responsible only for providing theme informations that are displayed
+in `Apperance > Themes`. Do not write in here any CSS declarations.
+
 Theme Name: {{ theme.name }}
 Theme URI: {{ theme.url }}
 Description: {{ theme.description }}
@@ -8,4 +12,5 @@ Author URI: {{ theme.author.url }}
 Text Domain: {{ theme.textdomain }}
 License: GPLv2 License
 License URI: https://wordpress.org/about/gpl/
+
 */
