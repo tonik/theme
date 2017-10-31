@@ -1,6 +1,6 @@
 # Tonik — WordPress Starter Theme
 
-> The `develop` branch tracks starter development and it's not a stable code. If you want a stable version, use the `master` branch or one of the latest releases.
+> The `develop` branch tracks starter development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/theme/tree/master) branch or one of the latest [releases](//github.com/tonik/theme/releases).
 
 [![Build Status](https://travis-ci.org/tonik/theme.svg?branch=develop)](https://travis-ci.org/tonik/theme)
 
