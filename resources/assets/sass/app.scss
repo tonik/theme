@@ -1,7 +1,9 @@
-// Start by including your theme specific
-// settings, variables, mixins and functions.
+// Variables
+// =================================================
 @import 'variables';
 
+// Demo
+// =================================================
 // Delete demo styles below and you are ready
 // to start building your theme styling.
 * {
@@ -29,6 +31,7 @@ body {
 
 .header {
   padding: 3em;
+  color: $white;
   background-color: $primary;
 }
 
@@ -48,7 +51,6 @@ body {
 }
 
 .footer {
-  border-top: 2px solid $primary;
   padding-top: 1em;
 
   ul {
