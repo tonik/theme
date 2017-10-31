@@ -1,6 +1,6 @@
 # Tonik — WordPress Starter Theme
 
-[![Build Status](https://travis-ci.org/tonik/theme.svg?branch=master)](https://travis-ci.org/tonik/theme)
+[![Build Status](https://travis-ci.org/tonik/theme.svg?branch=develop)](https://travis-ci.org/tonik/theme)
 
 ### Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.
 
@@ -8,8 +8,9 @@ Take a look at what is waiting for you:
 
 - [ES6](https://babeljs.io/learn-es2015/) for JavaScript
 - [SASS](http://sass-lang.com/) preprocessor for CSS
-- [Webpack](https://webpack.js.org/) for managing, compiling and optimizing theme asset files
+- [Webpack](https://webpack.js.org/) for managing, compiling and optimizing theme's asset files
 - Simple [CLI](https://github.com/tonik/cli) for quickly initializing a new project
+- Ready to use front-end boilerplates for [Foundation](//foundation.zurb.com/sites.html), [Bootstrap](//getbootstrap.com/docs/3.3/), [Bulma](//bulma.io/) and [Vue](//vuejs.org/)
 - Utilizes PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
 - Simple [Theme Service Container](http://symfony.com/doc/2.0/glossary.html#term-service-container)
 - Child Theme friendly [Autoloader](https://en.wikipedia.org/wiki/Autoload)

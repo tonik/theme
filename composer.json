@@ -6,9 +6,9 @@
   "type": "wordpress-theme",
   "require": {
     "php": ">=7.0",
-    "tonik/gin": "^2.0.0"
+    "tonik/gin": "dev-develop"
   },
   "require-dev": {
-    "tonik/cli": "^2.0.0"
+    "tonik/cli": "dev-develop"
   }
 }
