@@ -5,8 +5,8 @@
                     <li><a href="https://github.com/tonik/tonik">Github</a></li>
                 </ul>
             </footer>
-
-            <?php wp_footer(); ?>
         </main>
+
+        <?php wp_footer(); ?>
     </body>
 </html>

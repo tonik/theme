@@ -7,7 +7,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <main class="main">
+        <main id="app" class="app">
             <nav>
                 <a href="<?= get_home_url(); ?>"><h1>WordPress Starter Theme</h1></a>
             </nav>
