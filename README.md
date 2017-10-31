@@ -1,5 +1,7 @@
 # Tonik — WordPress Starter Theme
 
+> The `develop` branch tracks starter development and it's not a stable code. If you want a stable version, use the `master` branch or one of the latest releases.
+
 [![Build Status](https://travis-ci.org/tonik/theme.svg?branch=develop)](https://travis-ci.org/tonik/theme)
 
 ### Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.
