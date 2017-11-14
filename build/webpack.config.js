@@ -95,6 +95,7 @@ module.exports = {
     new ExtractTextPlugin(config.outputs.css),
     new CleanPlugin(config.paths.public, { root: config.paths.root }),
     new CopyPlugin([{
+      context: config.paths.images,
       from: {
         glob: `${config.paths.images}/**/*`,
         flatten: true,

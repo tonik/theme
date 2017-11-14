@@ -9,6 +9,7 @@ module.exports = {
   include: config.paths.images,
   loader: 'file-loader',
   options: {
+    context: config.paths.images,
     publicPath: config.paths.relative,
     name: config.outputs.image.filename,
     emitFile: false
