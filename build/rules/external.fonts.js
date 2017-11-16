@@ -9,7 +9,8 @@ module.exports = {
   include: config.paths.external,
   loader: 'file-loader',
   options: {
+    context: config.paths.fonts,
     publicPath: config.paths.relative,
-    name: config.outputs.font.filename
+    name: config.outputs.external.font.filename
   }
 }

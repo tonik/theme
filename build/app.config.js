@@ -35,9 +35,13 @@ module.exports = merge({
    */
   outputs: {
     css: { filename: 'css/[name].css' },
-    font: { filename: 'fonts/[name].[ext]' },
+    font: { filename: 'fonts/[path][name].[ext]' },
     image: { filename: 'images/[path][name].[ext]' },
-    javascript: { filename: 'js/[name].js' }
+    javascript: { filename: 'js/[name].js' },
+    external: {
+      image: { filename: 'images/[name].[ext]' },
+      font: { filename: 'fonts/[name].[ext]' }
+    }
   },
 
   /**

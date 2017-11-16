@@ -10,6 +10,6 @@ module.exports = {
   loader: 'file-loader',
   options: {
     publicPath: config.paths.relative,
-    name: config.outputs.image.filename
+    name: config.outputs.external.image.filename
   }
 }
