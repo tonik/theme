@@ -75,6 +75,9 @@ module.exports = merge({
     styleLint: {
       files: ['resources/assets/**/*.s?(a|c)ss']
     },
+    autoprefixer: {
+      browsers: ['last 2 versions', '> 1%'],
+    },
     browserSync: {
       host: 'localhost',
       port: 3000,
