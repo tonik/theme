@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace App\Theme\Structure;
 |
 */
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 /**
  * Renders a [button] shortcode.
@@ -34,4 +34,4 @@ function render_button_shortcode($atts, $content)
 
     return ob_get_clean();
 }
-add_shortcode('button', 'App\Theme\Structure\render_button_shortcode');
+add_shortcode('button', 'Tonik\Theme\App\Structure\render_button_shortcode');

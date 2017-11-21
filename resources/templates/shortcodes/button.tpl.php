@@ -1,3 +1,3 @@
-<a class="button large" href="<?= $attributes['href'] ?>">
+<a href="<?= $attributes['href'] ?>">
     <?= $content ?>
 </a>

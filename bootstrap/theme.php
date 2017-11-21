@@ -19,8 +19,8 @@ $theme = Tonik\Gin\Foundation\Theme::getInstance();
  | Bind Theme Config
  |-----------------------------------------------------------
  |
- | We neet to bind configs like theme's paths, directories and
- | files to autoload. This values will be used by the rest
+ | We need to bind configs like theme's paths, directories and
+ | files to autoload. These values will be used by the rest
  | of theme components like assets, templates etc.
  |
  */
@@ -37,7 +37,7 @@ $theme->bind('config', function () use ($config) {
  | Return the Theme
  |-----------------------------------------------------------
  |
- | Here we returns the theme instance. Later, this instance
+ | Here we return the theme instance. Later, this instance
  | is used for autoload all theme's core component.
  |
  */

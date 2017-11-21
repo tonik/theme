@@ -3,11 +3,6 @@
     "app": [
       "./resources/assets/js/app.js",
       "./resources/assets/sass/app.scss"
-    ],
-
-    "foundation": [
-      "./resources/assets/js/foundation.js",
-      "./resources/assets/sass/foundation.scss"
     ]
   },
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 /*
 |----------------------------------------------------------------
@@ -12,7 +12,7 @@ namespace App\Theme\Structure;
 |
 */
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 /**
  * Registers navigation areas.
@@ -25,4 +25,4 @@ function register_navigation_areas()
         'primary' => __('Primary', config('textdomain')),
     ]);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
+add_action('after_setup_theme', 'Tonik\Theme\App\Structure\register_navigation_areas');

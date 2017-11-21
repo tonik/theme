@@ -1,11 +1,9 @@
-<article>
-    <h3>
-        <a href="<?php the_permalink() ?>">
-            <?php the_title() ?>
-        </a>
+<article class="thumbnail">
+    <a href="<?php the_permalink(); ?>">
+        <h2><?php the_title(); ?></h2>
+    </a>
 
-        <small>
-            <time><?php the_date() ?></time>
-        </small>
-    </h3>
+    <time>
+        <small><?php the_date(); ?></small>
+    </time>
 </article>

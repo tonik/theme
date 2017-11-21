@@ -10,6 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
 
+const vueRule = require('./rules/vue')
 const sassRule = require('./rules/sass')
 const fontsRule = require('./rules/fonts')
 const imagesRule = require('./rules/images')
@@ -20,73 +21,89 @@ const externalImagesRule = require('./rules/external.images')
 const config = require('./app.config')
 
 module.exports = {
-    /**
-     * Should the source map be generated?
-     * @type {string|undefined}
-     */
-    devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
+  /**
+   * Should the source map be generated?
+   *
+   * @type {string|undefined}
+   */
+  devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
 
-    /**
-     * Application entry files for building.
-     * @type {Object}
-     */
-    entry: config.assets,
+  /**
+   * Application entry files for building.
+   *
+   * @type {Object}
+   */
+  entry: config.assets,
 
-    /**
-     * Output settings for application scripts.
-     * @type {Object}
-     */
-    output: {
-        path: config.paths.public,
-        filename: config.outputs.javascript.filename
-    },
+  /**
+   * Output settings for application scripts.
+   *
+   * @type {Object}
+   */
+  output: {
+    path: config.paths.public,
+    filename: config.outputs.javascript.filename
+  },
 
-    /**
-     * External objects which should be accessible inside application scripts.
-     * @type {Object}
-     */
-    externals: config.externals,
+  /**
+   * External objects which should be accessible inside application scripts.
+   *
+   * @type {Object}
+   */
+  externals: config.externals,
 
-    /**
-     * Performance settings to speed up build times.
-     * @type {Object}
-     */
-    performance: {
-        hints: false
-    },
+  /**
+   * Custom modules resolving settings.
+   *
+   * @type {Object}
+   */
+  resolve: config.resolve,
 
-    /**
-     * Build rules to handle application assset files.
-     * @type {Object}
-     */
-    module: {
-        rules: [
-            sassRule,
-            fontsRule,
-            imagesRule,
-            javascriptRule,
-            externalFontsRule,
-            externalImagesRule,
-        ]
-    },
+  /**
+   * Performance settings to speed up build times.
+   *
+   * @type {Object}
+   */
+  performance: {
+    hints: false
+  },
 
-    /**
-     * Common plugins which should run on every build.
-     * @type {Array}
-     */
-    plugins: [
-        new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
-        new ExtractTextPlugin(config.outputs.css),
-        new CleanPlugin(config.paths.public, { root: config.paths.root }),
-        new CopyPlugin([{
-            from: {
-                glob: `${config.paths.images}/**/*`,
-                flatten: true,
-                dot: false
-            },
-            to: config.outputs.image.filename,
-        }]),
+  /**
+   * Build rules to handle application assset files.
+   *
+   * @type {Object}
+   */
+  module: {
+    rules: [
+      vueRule,
+      sassRule,
+      fontsRule,
+      imagesRule,
+      javascriptRule,
+      externalFontsRule,
+      externalImagesRule,
     ]
+  },
+
+  /**
+   * Common plugins which should run on every build.
+   *
+   * @type {Array}
+   */
+  plugins: [
+    new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
+    new ExtractTextPlugin(config.outputs.css),
+    new CleanPlugin(config.paths.public, { root: config.paths.root }),
+    new CopyPlugin([{
+      context: config.paths.images,
+      from: {
+        glob: `${config.paths.images}/**/*`,
+        flatten: true,
+        dot: false
+      },
+      to: config.outputs.image.filename,
+    }]),
+  ]
 }
 
 /**
@@ -94,9 +111,9 @@ module.exports = {
  * linting is configured.
  */
 if (config.settings.styleLint) {
-    module.exports.plugins.push(
-        new StyleLintPlugin()
-    )
+  module.exports.plugins.push(
+    new StyleLintPlugin(config.settings.styleLint)
+  )
 }
 
 /**
@@ -104,9 +121,13 @@ if (config.settings.styleLint) {
  * settings are configured.
  */
 if (config.settings.browserSync) {
-    module.exports.plugins.push(
-        new BrowserSyncPlugin(config.settings.browserSync)
-    )
+  module.exports.plugins.push(
+    new BrowserSyncPlugin(config.settings.browserSync, {
+      // Prevent BrowserSync from reloading the page
+      // and let Webpack Dev Server take care of this.
+      reload: false
+    })
+  )
 }
 
 /**
@@ -114,21 +135,29 @@ if (config.settings.browserSync) {
  * generating production build.
  */
 if (! isdev) {
-    module.exports.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({
-            comments: isdev,
-            compress: { warnings: false },
-            sourceMap: isdev
-        })
-    )
+  module.exports.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    })
+  )
 
-    module.exports.plugins.push(
-        new ImageminPlugin({
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            optipng: { optimizationLevel: 7 },
-            gifsicle: { optimizationLevel: 3 },
-            pngquant: { quality: '65-90', speed: 4 },
-            svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
-        })
-    )
+  module.exports.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      comments: isdev,
+      compress: { warnings: false },
+      sourceMap: isdev
+    })
+  )
+
+  module.exports.plugins.push(
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      optipng: { optimizationLevel: 7 },
+      gifsicle: { optimizationLevel: 3 },
+      pngquant: { quality: '65-90', speed: 4 },
+      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
+    })
+  )
 }

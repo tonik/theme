@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 /*
 |-----------------------------------------------------------
@@ -13,7 +13,7 @@ namespace App\Theme\Structure;
 |
 */
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 /**
  * Registers the widget areas.
@@ -30,4 +30,4 @@ function register_widget_areas()
         'after_title' => '</h5>',
     ]);
 }
-add_action('widgets_init', 'App\Theme\Structure\register_widget_areas');
+add_action('widgets_init', 'Tonik\Theme\App\Structure\register_widget_areas');

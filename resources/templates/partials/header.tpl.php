@@ -1,8 +1,13 @@
-<header class="callout large">
-    <?php do_action('theme/header/start') ?>
-
+<header class="header">
     <h2><?= $title ?></h2>
-    <p class="lead"><?= $lead ?></p>
+    <p><?= $lead ?></p>
 
-    <?php do_action('theme/header/end') ?>
+    <?php
+        /**
+         * Functions hooked into `theme/header/end` action.
+         *
+         * @hooked Tonik\Theme\App\Structure\render_documentation_button - 10
+         */
+        do_action('theme/header/end')
+    ?>
 </header>

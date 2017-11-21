@@ -1,22 +1,73 @@
-// Basic application includes. Here we should import Foundation
-// settings, our own variables, mixins and functions.
-@import 'settings';
+// Variables
+// =================================================
 @import 'variables';
 
-// Now we can include all of theme specific components.
+// Demo
+// =================================================
 // Delete demo styles below and you are ready
 // to start building your theme styling.
-.main {
-    padding: 6rem 0;
-
-    & > * + * { margin-top: 3rem; }
+* {
+  box-sizing: border-box;
 }
 
-.posts {
-    & > * + * { margin-top: 1.5rem; }
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  & > * + * { margin-top: 3rem; }
+}
+
+.wrapper {
+  display: flex;
+
+  & > * + * { margin-left: 3em; }
+}
+
+.header {
+  padding: 3em;
+  color: $white;
+  background-color: $primary;
+}
+
+.content {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  max-width: 25%;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 }
 
 .footer {
-    border-top: 1px solid $medium-gray;
-    padding-top: 3rem;
+  padding-top: 1em;
+
+  ul {
+    padding: 0;
+
+    & > * + * { margin-left: 0.5em; }
+
+    li { display: inline-block; }
+  }
+}
+
+.posts {
+  & > * + * { margin-top: 1.5rem; }
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
