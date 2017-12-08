@@ -4,6 +4,12 @@
   "keywords": ["tonik", "theme", "gin", "wordpress", "wordpress-starter-theme", "wordpress-theme"],
   "license": "MIT",
   "type": "wordpress-theme",
+  "extra": {
+    "installer-paths": {
+      "vendor/tonik/{$name}/": ["tonik/gin"],
+      "../../plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  },
   "require": {
     "php": ">=7.0",
     "tonik/gin": "dev-develop"
