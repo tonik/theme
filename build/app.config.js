@@ -72,9 +72,7 @@ module.exports = merge({
    */
   settings: {
     sourceMaps: true,
-    styleLint: {
-      files: ['resources/assets/**/*.s?(a|c)ss']
-    },
+    styleLint: {},
     autoprefixer: {
       browsers: ['last 2 versions', '> 1%'],
     },
