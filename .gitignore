@@ -8,3 +8,5 @@ vendor
 Thumbs.db
 
 public
+
+.env
