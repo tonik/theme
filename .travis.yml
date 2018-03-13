@@ -3,7 +3,6 @@ sudo: false
 
 php:
   - 7.1
-  - 7.0
 
 env:
   - TRAVIS_NODE_VERSION="6"
