@@ -1,6 +1,7 @@
 const path = require('path')
 const merge = require('webpack-merge')
 
+const env = require('./utils/env')
 const config = require('../config/app')
 
 module.exports = merge({
@@ -34,13 +35,29 @@ module.exports = merge({
    * @type {Object}
    */
   outputs: {
-    css: { filename: 'css/[name].css' },
-    font: { filename: 'fonts/[name].[ext]' },
-    image: { filename: 'images/[path][name].[ext]' },
-    javascript: { filename: 'js/[name].js' },
+    css: {
+      filename: env('FILENAME_CSS', 'css/[name].css')
+    },
+
+    font: {
+      filename: env('FILENAME_FONT', 'fonts/[name].[ext]')
+    },
+
+    image: {
+      filename: env('FILENAME_IMAGE', 'images/[path][name].[ext]')
+    },
+
+    javascript: {
+      filename: env('FILENAME_JAVASCRIPT', 'js/[name].js')
+    },
+
     external: {
-      image: { filename: 'images/[name].[ext]' },
-      font: { filename: 'fonts/[name].[ext]' }
+      image: {
+        filename: env('FILENAME_EXTERNAL_IMAGE', 'images/[name].[ext]')
+      },
+      font: {
+        filename: env('FILENAME_EXTERNAL_FONT', 'fonts/[name].[ext]')
+      }
     }
   },
 
@@ -71,17 +88,17 @@ module.exports = merge({
    * @type {Object}
    */
   settings: {
-    sourceMaps: true,
+    sourceMaps: env('SOURCEMAPS', true),
     styleLint: {},
     autoprefixer: {
       browsers: ['last 2 versions', '> 1%'],
     },
     browserSync: {
-      host: 'localhost',
-      port: 3000,
-      proxy: 'http://localhost:8080/',
-      open: false,
-      reloadDelay: 500,
+      host: env('BROWSERSYNC_HOST', 'localhost'),
+      port: env('BROWSERSYNC_PORT', 3000),
+      proxy: env('BROWSERSYNC_PROXY', 'http://localhost:8080/'),
+      open: env('BROWSERSYNC_OPEN', false),
+      reloadDelay: env('BROWSERSYNC_DELAY', 500),
       files: [
         "*.php",
         "app/**/*.php",
