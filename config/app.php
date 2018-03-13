@@ -57,7 +57,7 @@ return [
         'templates' => 'resources/templates',
         'assets' => 'resources/assets',
         'public' => 'public',
-        'app' => 'app',
+        'src' => 'src',
     ],
 
     /*
