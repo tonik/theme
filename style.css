@@ -1,5 +1,5 @@
 /*
-This file is responsible only for providing theme informations that are displayed
+This file is responsible only for providing theme information that are displayed
 in `Apperance > Themes`. Do not write in here any CSS declarations.
 
 Theme Name: {{ theme.name }}
