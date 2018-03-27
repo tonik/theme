@@ -89,7 +89,9 @@ module.exports = merge({
    */
   settings: {
     sourceMaps: env('SOURCEMAPS', true),
-    styleLint: {},
+    styleLint: {
+      context: 'resources/assets'
+    },
     autoprefixer: {
       browsers: ['last 2 versions', '> 1%'],
     },
@@ -100,13 +102,13 @@ module.exports = merge({
       open: env('BROWSERSYNC_OPEN', false),
       reloadDelay: env('BROWSERSYNC_DELAY', 500),
       files: [
-        "*.php",
-        "app/**/*.php",
-        "resources/templates/**/*.php",
-        "resources/assets/js/**/*.js",
-        "resources/assets/sass/**/*.{sass,scss}",
-        "resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}",
-        "resources/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}"
+        '*.php',
+        'app/**/*.php',
+        'resources/templates/**/*.php',
+        'resources/assets/js/**/*.js',
+        'resources/assets/sass/**/*.{sass,scss}',
+        'resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}',
+        'resources/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}'
       ]
     }
   }
