@@ -5,7 +5,10 @@
     "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
-    "watch": "npm run development -- --watch && webpack-dev-server --progress --colors"
+    "watch": "npm run development -- --watch && webpack-dev-server --progress --colors",
+    "lint:js": "eslint resources/assets/js/**/*.{js,vue}",
+    "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
+    "lint": "npm run lint:js && npm run lint:sass"
   },
   "dependencies": {},
   "devDependencies": {
@@ -22,6 +25,7 @@
     "dotenv": "^5.0.1",
     "eslint": "^4.10.0",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-vue": "^4.7.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.1",
     "imagemin-webpack-plugin": "^1.4.4",

@@ -5,6 +5,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const config = require('../app.config')
 
+/**
+ * Internal application SASS files.
+ * Have build-in autoprefixing.
+ */
 module.exports = {
   test: /\.s[ac]ss$/,
   include: config.paths.sass,
@@ -21,7 +25,9 @@ module.exports = {
         loader: 'postcss-loader',
         options: {
           sourceMap: true,
-          plugins: () => [autoprefixer(config.settings.autoprefixer)]
+          plugins: () => [
+            autoprefixer(config.settings.autoprefixer)
+          ]
         }
       },
 
