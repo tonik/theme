@@ -2,7 +2,7 @@
 
 > The `develop` branch tracks starter development and it's not a stable code. If you want a stable version, use the [`master`](//github.com/tonik/theme/tree/master) branch or one of the latest [releases](//github.com/tonik/theme/releases).
 
-[![Build Status](https://travis-ci.org/tonik/theme.svg?branch=develop)](https://travis-ci.org/tonik/theme) [![Packagist](https://img.shields.io/packagist/dt/tonik/theme.svg)](https://github.com/tonik/theme) [![license](https://img.shields.io/github/license/tonik/theme.svg)](https://github.com/tonik/theme)
+[![Build Status](https://travis-ci.org/tonik/theme.svg?branch=master)](https://travis-ci.org/tonik/theme) [![Packagist](https://img.shields.io/packagist/dt/tonik/theme.svg)](https://github.com/tonik/theme) [![license](https://img.shields.io/github/license/tonik/theme.svg)](https://github.com/tonik/theme)
 
 ### Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.
 
