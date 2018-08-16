@@ -1,5 +1,3 @@
 {
-  "rules": {
-    "indentation": 2
-  }
+  "extends": "@tonik/stylelint-config-scss"
 }

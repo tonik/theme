@@ -1,11 +1,12 @@
 // Variables
 // =================================================
-@import 'variables';
+@import "variables";
 
 // Demo
 // =================================================
 // Delete demo styles below and you are ready
 // to start building your theme styling.
+
 * {
   box-sizing: border-box;
 }
@@ -56,7 +57,7 @@ body {
   ul {
     padding: 0;
 
-    & > * + * { margin-left: 0.5em; }
+    & > * + * { margin-left: .5em; }
 
     li { display: inline-block; }
   }
