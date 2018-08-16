@@ -5,7 +5,10 @@
     "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config build/webpack.config.js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
-    "watch": "npm run development -- --watch && webpack-dev-server --progress --colors"
+    "watch": "npm run development -- --watch && webpack-dev-server --progress --colors",
+    "lint:js": "eslint resources/assets/js/**/*.{js}",
+    "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
+    "lint": "npm run lint:js && npm run lint:sass"
   },
   "dependencies": {},
   "devDependencies": {
