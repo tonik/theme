@@ -21,10 +21,10 @@ use function Tonik\Theme\App\template;
  */
 function render_header()
 {
-    template('partials/header', [
+    template('partials/header', array(
         'title' => __('Not Found'),
         'lead' => __('The page you are looking for no longer exists.'),
-    ]);
+    ) );
 }
 add_action('theme/index/header', 'Tonik\Theme\NotFound\render_header');
 
