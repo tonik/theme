@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "plugin:vue/essential"
-  ],
+  "extends": [],
   "rules": {
     "indent": ["error", 2]
   },

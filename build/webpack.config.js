@@ -10,7 +10,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
 
-const vueRule = require('./rules/vue')
 const sassRule = require('./rules/sass')
 const fontsRule = require('./rules/fonts')
 const imagesRule = require('./rules/images')
@@ -75,7 +74,6 @@ module.exports = {
    */
   module: {
     rules: [
-      vueRule,
       sassRule,
       fontsRule,
       imagesRule,
