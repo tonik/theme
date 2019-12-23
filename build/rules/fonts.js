@@ -1,4 +1,4 @@
-const config = require('../app.config')
+const config = require('../app.config');
 
 /**
  * Internal application font files. Rule test regrex additionaly
@@ -10,6 +10,6 @@ module.exports = {
   loader: 'file-loader',
   options: {
     publicPath: config.paths.relative,
-    name: config.outputs.font.filename,
+    name: config.outputs.font.filename
   }
-}
+};

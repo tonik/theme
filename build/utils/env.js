@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config();
 
 /**
  * Gets a enviourment value if it's set or default otherwise.
@@ -7,5 +7,5 @@ const dotenv = require('dotenv').config()
  * @param {*} defaults
  */
 module.exports = (variable, defaults) => {
-  return (process.env[variable]) ? process.env[variable] : defaults
-}
+  return process.env[variable] ? process.env[variable] : defaults;
+};

@@ -1,23 +1,23 @@
-const path = require('path')
-const isdev = require('isdev')
-const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
+const path = require('path');
+const isdev = require('isdev');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
-const CopyPlugin = require('copy-webpack-plugin')
-const CleanPlugin = require('clean-webpack-plugin')
-const StyleLintPlugin = require('stylelint-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 
-const sassRule = require('./rules/sass')
-const fontsRule = require('./rules/fonts')
-const imagesRule = require('./rules/images')
-const javascriptRule = require('./rules/javascript')
-const externalFontsRule = require('./rules/external.fonts')
-const externalImagesRule = require('./rules/external.images')
+const sassRule = require('./rules/sass');
+const fontsRule = require('./rules/fonts');
+const imagesRule = require('./rules/images');
+const javascriptRule = require('./rules/javascript');
+const externalFontsRule = require('./rules/external.fonts');
+const externalImagesRule = require('./rules/external.images');
 
-const config = require('./app.config')
+const config = require('./app.config');
 
 module.exports = {
   /**
@@ -25,7 +25,7 @@ module.exports = {
    *
    * @type {string|undefined}
    */
-  devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
+  devtool: isdev && config.settings.sourceMaps ? 'source-map' : undefined,
 
   /**
    * Application entry files for building.
@@ -79,7 +79,7 @@ module.exports = {
       imagesRule,
       javascriptRule,
       externalFontsRule,
-      externalImagesRule,
+      externalImagesRule
     ]
   },
 
@@ -92,26 +92,26 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
     new ExtractTextPlugin(config.outputs.css),
     new CleanPlugin(config.paths.public, { root: config.paths.root }),
-    new CopyPlugin([{
-      context: config.paths.images,
-      from: {
-        glob: `${config.paths.images}/**/*`,
-        flatten: true,
-        dot: false
-      },
-      to: config.outputs.image.filename,
-    }]),
+    new CopyPlugin([
+      {
+        context: config.paths.images,
+        from: {
+          glob: `${config.paths.images}/**/*`,
+          flatten: true,
+          dot: false
+        },
+        to: config.outputs.image.filename
+      }
+    ])
   ]
-}
+};
 
 /**
  * Adds Stylelint plugin if
  * linting is configured.
  */
 if (config.settings.styleLint) {
-  module.exports.plugins.push(
-    new StyleLintPlugin(config.settings.styleLint)
-  )
+  module.exports.plugins.push(new StyleLintPlugin(config.settings.styleLint));
 }
 
 /**
@@ -125,21 +125,21 @@ if (config.settings.browserSync) {
       // and let Webpack Dev Server take care of this.
       reload: false
     })
-  )
+  );
 }
 
 /**
  * Adds optimalizing plugins when
  * generating production build.
  */
-if (! isdev) {
+if (!isdev) {
   module.exports.plugins.push(
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
       }
     })
-  )
+  );
 
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
@@ -147,7 +147,7 @@ if (! isdev) {
       compress: { warnings: false },
       sourceMap: isdev
     })
-  )
+  );
 
   module.exports.plugins.push(
     new ImageminPlugin({
@@ -157,5 +157,5 @@ if (! isdev) {
       pngquant: { quality: '65-90', speed: 4 },
       svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
     })
-  )
+  );
 }

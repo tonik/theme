@@ -1,9 +1,9 @@
-const isdev = require('isdev')
-const autoprefixer = require('autoprefixer')
+const isdev = require('isdev');
+const autoprefixer = require('autoprefixer');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const config = require('../app.config')
+const config = require('../app.config');
 
 /**
  * Internal application SASS files.
@@ -25,9 +25,7 @@ module.exports = {
         loader: 'postcss-loader',
         options: {
           sourceMap: true,
-          plugins: () => [
-            autoprefixer(config.settings.autoprefixer)
-          ]
+          plugins: () => [autoprefixer(config.settings.autoprefixer)]
         }
       },
 
@@ -40,4 +38,4 @@ module.exports = {
     ],
     fallback: 'style-loader'
   })
-}
+};

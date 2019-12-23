@@ -1,4 +1,4 @@
-const config = require('../app.config')
+const config = require('../app.config');
 
 /**
  * Internal application image files. This rule exceptionally don't emit its files,
@@ -14,4 +14,4 @@ module.exports = {
     name: config.outputs.image.filename,
     emitFile: false
   }
-}
+};

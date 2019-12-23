@@ -1,4 +1,4 @@
-const config = require('../app.config')
+const config = require('../app.config');
 
 /**
  * External dependencies image files. This rule allows for emiting
@@ -12,4 +12,4 @@ module.exports = {
     publicPath: config.paths.relative,
     name: config.outputs.external.image.filename
   }
-}
+};

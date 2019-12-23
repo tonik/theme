@@ -1,4 +1,4 @@
-const config = require('../app.config')
+const config = require('../app.config');
 
 /**
  * External dependencies font files. This rule allows for emiting
@@ -13,4 +13,4 @@ module.exports = {
     publicPath: config.paths.relative,
     name: config.outputs.external.font.filename
   }
-}
+};
