@@ -103,6 +103,15 @@ module.exports = {
       },
       to: config.outputs.image.filename,
     }]),
+    new CopyPlugin([{
+      context: config.paths.fonts,
+      from: {
+        glob: `${config.paths.fonts}/**/*`,
+        flatten: true,
+        dot: false
+      },
+      to: config.outputs.font.filename,
+    }]),
   ]
 }
 
