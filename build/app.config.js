@@ -106,6 +106,7 @@ module.exports = merge({
         'app/**/*.php',
         'resources/templates/**/*.php',
         'resources/assets/js/**/*.js',
+        'resources/assets/js/**/*.vue',
         'resources/assets/sass/**/*.{sass,scss}',
         'resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}',
         'resources/assets/fonts/**/*.{eot,ttf,woff,woff2,svg}'
