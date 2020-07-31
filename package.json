@@ -37,7 +37,7 @@
     "style-loader": "^0.16.1",
     "stylelint-webpack-plugin": "^0.7.0",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.4.4",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.1.0"
   }
 }
