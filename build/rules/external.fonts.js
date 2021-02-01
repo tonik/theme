@@ -7,10 +7,10 @@ const config = require('../app.config')
 module.exports = {
   test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
   include: config.paths.external,
-  loader: 'file-loader',
-  options: {
-    context: config.paths.fonts,
-    publicPath: config.paths.relative,
-    name: config.outputs.external.font.filename
-  }
+  type: 'asset/resource',
+  // options: {
+  //   context: config.paths.fonts,
+  //   publicPath: config.paths.relative,
+  //   name: config.outputs.external.font.filename
+  // }
 }

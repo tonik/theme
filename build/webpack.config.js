@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer')
 const CopyPlugin = require('copy-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
 
@@ -27,6 +27,13 @@ module.exports = {
    * @type {string|undefined}
    */
   devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
+
+  /**
+   * Providing the mode configuration option tells webpack to use its built-in optimizations accordingly.
+   *
+   * @type {string|undefined}
+   */
+  mode: isdev ? 'development' : 'production',
 
   /**
    * Application entry files for building.
@@ -75,13 +82,13 @@ module.exports = {
    */
   module: {
     rules: [
-      vueRule,
+      // vueRule,
       sassRule,
-      fontsRule,
-      imagesRule,
-      javascriptRule,
-      externalFontsRule,
-      externalImagesRule,
+      // fontsRule,
+      // imagesRule,
+      // javascriptRule,
+      // externalFontsRule,
+      // externalImagesRule,
     ]
   },
 
@@ -92,7 +99,7 @@ module.exports = {
    */
   plugins: [
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
-    new ExtractTextPlugin(config.outputs.css),
+    new MiniCssExtractPlugin(config.outputs.css),
     new CleanPlugin(config.paths.public, { root: config.paths.root }),
     new CopyPlugin([{
       context: config.paths.images,
@@ -135,22 +142,6 @@ if (config.settings.browserSync) {
  * generating production build.
  */
 if (! isdev) {
-  module.exports.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    })
-  )
-
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      comments: isdev,
-      compress: { warnings: false },
-      sourceMap: isdev
-    })
-  )
-
   module.exports.plugins.push(
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
