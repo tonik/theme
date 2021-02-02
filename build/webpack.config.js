@@ -85,7 +85,7 @@ module.exports = {
    */
   module: {
     rules: [
-      // vueRule,
+      vueRule,
       sassRule,
       fontsRule,
       imagesRule,
