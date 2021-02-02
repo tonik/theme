@@ -5,8 +5,8 @@ php:
   - 7.1
 
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="7"
+  - TRAVIS_NODE_VERSION="10"
+  - TRAVIS_NODE_VERSION="14"
 
 notifications:
   email:
