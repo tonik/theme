@@ -1,9 +1,5 @@
-process.traceDeprecation = true;
-
-const path = require('path')
 const isdev = require('isdev')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
 
 const ESLintPlugin = require('eslint-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')

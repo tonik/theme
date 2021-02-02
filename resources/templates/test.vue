@@ -1,1 +1,0 @@
-<span v-once>This will never change: {{ msg }}</span>
