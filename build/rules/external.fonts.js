@@ -8,9 +8,7 @@ module.exports = {
   test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
   include: config.paths.external,
   type: 'asset/resource',
-  // options: {
-  //   context: config.paths.fonts,
-  //   publicPath: config.paths.relative,
-  //   name: config.outputs.external.font.filename
-  // }
+  generator: {
+    filename: config.outputs.external.font.filename,
+  },
 }

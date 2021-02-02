@@ -90,7 +90,7 @@ module.exports = {
       fontsRule,
       imagesRule,
       javascriptRule,
-      // externalFontsRule,
+      externalFontsRule,
       externalImagesRule,
     ]
   },
