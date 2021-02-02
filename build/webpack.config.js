@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 const ESLintPlugin = require('eslint-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const CleanPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
@@ -100,7 +100,7 @@ module.exports = {
     new ESLintPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
     new MiniCssExtractPlugin(config.outputs.css),
-    new CleanPlugin(config.paths.public, { root: config.paths.root }),
+    new CleanWebpackPlugin({ verbose: true }),
     new CopyPlugin({
       patterns: [
         {
