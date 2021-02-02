@@ -87,7 +87,7 @@ module.exports = {
     rules: [
       // vueRule,
       sassRule,
-      // fontsRule,
+      fontsRule,
       imagesRule,
       javascriptRule,
       // externalFontsRule,

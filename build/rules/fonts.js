@@ -6,10 +6,8 @@ const config = require('../app.config')
  */
 module.exports = {
   test: /\.(eot|ttf|woff|woff2|svg)(\?\S*)?$/,
-  include: config.paths.fonts,
   type: 'asset/resource',
-  options: {
-    publicPath: config.paths.relative,
-    name: config.outputs.font.filename,
-  }
+  generator: {
+    filename: config.outputs.font.filename,
+  },
 }

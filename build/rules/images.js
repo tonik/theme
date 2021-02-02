@@ -8,10 +8,7 @@ module.exports = {
   test: /\.(png|jpe?g|gif|svg)$/,
   include: config.paths.images,
   type: 'asset/resource',
-  // options: {
-  //   context: config.paths.images,
-  //   publicPath: config.paths.relative,
-  //   name: config.outputs.image.filename,
-  //   emitFile: false
-  // }
+  generator: {
+    filename: config.outputs.image.filename,
+  },
 }
