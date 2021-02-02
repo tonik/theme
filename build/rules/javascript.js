@@ -7,5 +7,8 @@ const config = require('../app.config')
 module.exports = {
   test: /\.js$/,
   exclude: /node_modules/,
-  loader: 'eslint-loader',
+  loader: 'babel-loader',
+  options: {
+    presets: ['@babel/preset-env'],
+  },
 }

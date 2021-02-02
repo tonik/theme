@@ -1,9 +1,10 @@
 {
+  "parser": "babel-eslint",
   "extends": [
-    "plugin:vue/vue3-recommended",
+    "plugin:vue/vue3-recommended"
   ],
   "rules": {
-    "indent": ["error", 2]
+    "indent": ["error", 2],
   },
   "parserOptions": {
     "ecmaVersion": 6,
