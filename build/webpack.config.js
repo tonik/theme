@@ -1,14 +1,17 @@
+process.traceDeprecation = true;
+
 const path = require('path')
 const isdev = require('isdev')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
+const ESLintPlugin = require('eslint-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const vueRule = require('./rules/vue')
 const sassRule = require('./rules/sass')
@@ -85,10 +88,10 @@ module.exports = {
       // vueRule,
       sassRule,
       // fontsRule,
-      // imagesRule,
-      // javascriptRule,
+      imagesRule,
+      javascriptRule,
       // externalFontsRule,
-      // externalImagesRule,
+      externalImagesRule,
     ]
   },
 
@@ -98,18 +101,18 @@ module.exports = {
    * @type {Array}
    */
   plugins: [
+    new ESLintPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
     new MiniCssExtractPlugin(config.outputs.css),
     new CleanPlugin(config.paths.public, { root: config.paths.root }),
-    new CopyPlugin([{
-      context: config.paths.images,
-      from: {
-        glob: `${config.paths.images}/**/*`,
-        flatten: true,
-        dot: false
-      },
-      to: config.outputs.image.filename,
-    }]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: `${config.paths.images}/**/*`,
+          to: config.outputs.image.filename,
+        },
+      ],
+    }),
   ]
 }
 
@@ -143,12 +146,29 @@ if (config.settings.browserSync) {
  */
 if (! isdev) {
   module.exports.plugins.push(
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      optipng: { optimizationLevel: 7 },
-      gifsicle: { optimizationLevel: 3 },
-      pngquant: { quality: '65-90', speed: 4 },
-      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
-    })
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 7 }],
+          ['pngquant', { quality: '65-90', speed: 4 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                  removeUnknownsAndDefaults: false,
+                  cleanupIDs: false
+                },
+              ],
+            },
+          ],
+        ],
+      },
+    }),
   )
 }
