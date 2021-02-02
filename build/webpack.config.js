@@ -110,6 +110,7 @@ module.exports = {
         {
           from: `${config.paths.images}/**/*`,
           to: config.outputs.image.filename,
+          noErrorOnMissing: true,
         },
       ],
     }),
