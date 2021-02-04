@@ -10,6 +10,7 @@
     "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
     "lint": "npm run lint:js && npm run lint:sass"
   },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
