@@ -8,6 +8,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const vueRule = require('./rules/vue')
 const sassRule = require('./rules/sass')
@@ -98,6 +99,7 @@ module.exports = {
    */
   plugins: [
     new ESLintPlugin(),
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
     new MiniCssExtractPlugin(config.outputs.css),
     new CleanWebpackPlugin({ verbose: true }),
