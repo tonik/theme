@@ -13,14 +13,18 @@ module.exports = {
   test: /\.s[ac]ss$/,
   include: config.paths.sass,
   use: [
-    MiniCssExtractPlugin.loader,
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        publicPath: config.paths.public,
+      }
+    },
     {
       loader: 'css-loader',
       options: {
-        sourceMap: isdev
+        sourceMap: isdev,
       }
     },
-
     {
       loader: 'postcss-loader',
       options: {

@@ -101,7 +101,9 @@ module.exports = {
     new ESLintPlugin(),
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
-    new MiniCssExtractPlugin(config.outputs.css),
+    new MiniCssExtractPlugin({
+      filename: config.outputs.css.filename,
+    }),
     new CleanWebpackPlugin({ verbose: true }),
     new CopyPlugin({
       patterns: [
