@@ -16,7 +16,9 @@ module.exports = {
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        publicPath: config.paths.public,
+        publicPath: (resourcePath, context) => {
+          return '../';
+        },
       }
     },
     {
