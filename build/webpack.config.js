@@ -1,14 +1,14 @@
-const path = require('path')
 const isdev = require('isdev')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
 
+const ESLintPlugin = require('eslint-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const CleanPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const { default: ImageminPlugin } = require('imagemin-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const vueRule = require('./rules/vue')
 const sassRule = require('./rules/sass')
@@ -27,6 +27,13 @@ module.exports = {
    * @type {string|undefined}
    */
   devtool: (isdev && config.settings.sourceMaps) ? 'source-map' : undefined,
+
+  /**
+   * Providing the mode configuration option tells webpack to use its built-in optimizations accordingly.
+   *
+   * @type {string|undefined}
+   */
+  mode: isdev ? 'development' : 'production',
 
   /**
    * Application entry files for building.
@@ -91,18 +98,22 @@ module.exports = {
    * @type {Array}
    */
   plugins: [
+    new ESLintPlugin(),
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: !isdev }),
-    new ExtractTextPlugin(config.outputs.css),
-    new CleanPlugin(config.paths.public, { root: config.paths.root }),
-    new CopyPlugin([{
-      context: config.paths.images,
-      from: {
-        glob: `${config.paths.images}/**/*`,
-        flatten: true,
-        dot: false
-      },
-      to: config.outputs.image.filename,
-    }]),
+    new MiniCssExtractPlugin({
+      filename: config.outputs.css.filename,
+    }),
+    new CleanWebpackPlugin({ verbose: true }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: `${config.paths.images}/**/*`,
+          to: config.outputs.image.filename,
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
   ]
 }
 
@@ -136,28 +147,29 @@ if (config.settings.browserSync) {
  */
 if (! isdev) {
   module.exports.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    })
-  )
-
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      comments: isdev,
-      compress: { warnings: false },
-      sourceMap: isdev
-    })
-  )
-
-  module.exports.plugins.push(
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      optipng: { optimizationLevel: 7 },
-      gifsicle: { optimizationLevel: 3 },
-      pngquant: { quality: '65-90', speed: 4 },
-      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false }
-    })
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 7 }],
+          ['pngquant', { quality: '65-90', speed: 4 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                  removeUnknownsAndDefaults: false,
+                  cleanupIDs: false
+                },
+              ],
+            },
+          ],
+        ],
+      },
+    }),
   )
 }

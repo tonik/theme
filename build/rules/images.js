@@ -7,11 +7,8 @@ const config = require('../app.config')
 module.exports = {
   test: /\.(png|jpe?g|gif|svg)$/,
   include: config.paths.images,
-  loader: 'file-loader',
-  options: {
-    context: config.paths.images,
-    publicPath: config.paths.relative,
-    name: config.outputs.image.filename,
-    emitFile: false
-  }
+  type: 'asset/resource',
+  generator: {
+    filename: config.outputs.image.filename,
+  },
 }

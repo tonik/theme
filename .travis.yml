@@ -2,11 +2,11 @@ language: php
 sudo: false
 
 php:
-  - 7.1
+  - 7.3
 
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="7"
+  - TRAVIS_NODE_VERSION="10"
+  - TRAVIS_NODE_VERSION="14"
 
 notifications:
   email:

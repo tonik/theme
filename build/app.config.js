@@ -44,7 +44,7 @@ module.exports = merge({
     },
 
     image: {
-      filename: env('FILENAME_IMAGE', 'images/[path][name].[ext]')
+      filename: env('FILENAME_IMAGE', 'images/[name].[ext]')
     },
 
     javascript: {
